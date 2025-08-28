@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consul Virtual</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .logo {
+        width: 100px;
+        position: absolute;
+        margin: 0px 66px;
+        z-index: 1000;
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#D3E8FE]">
+    <div class="logo">
+      <img src="images/logo.png" />
+    </div>
+    <section
+      class="min-h-screen flex items-center justify-center px-[76px] py-[70px]"
+    >
+      <div
+        class="relative bg-white rounded-[24px] w-full h-[44rem] p-8 md:p-12 text-center overflow-hidden shadow-[4px_4px_20px_0px_#0000001A]"
+      >
+        <!-- Title and Subtitle -->
+        <h1
+          class="font-helvetica text-3xl md:text-6xl font-medium text-black mb-4"
+        >
+          Consul Virtual
+        </h1>
+        <p class="text-gray-700 text-base md:text-2xl mb-6 font-normal">
+          Simula el proceso de solicitud de visa y descubre si<br />
+          cumples con los requisitos antes de aplicar oficialmente.
+        </p>
+        <!-- Start Button -->
+        <button
+          id="openModalBtn"
+          class="bg-[#03139D] text-white w-[135px] h-[50px] px-6 py-2 rounded-[10px] text-sm md:text-base"
+        >
+          Comenzar
+        </button>
+        <!-- Characters -->
+        <div
+          class="fixed h-[62%] bottom-0 left-0 right-0 mt-10 z-10 flex justify-center"
+        >
+          <img class="" src="images/intro-image.svg" alt="image description" />
+        </div>
+        <!-- <div class="mt-10 relative z-10 flex justify-center gap-4 md:gap-8">
+          <img
+            src="/images/character1.png"
+            alt="Character 1"
+            class="w-28 md:w-36"
+          />
+          <img
+            src="/images/character2.png"
+            alt="Character 2"
+            class="w-28 md:w-36"
+          />
+          <img
+            src="/images/character3.png"
+            alt="Character 3"
+            class="w-28 md:w-36"
+          />
+          </div> -->
+        <!-- Floating Icons -->
+        <!-- <img
+          src="/images/globe-icon.png"
+          alt="Globe"
+          class="w-10 md:w-12 absolute left-10 top-10"
+          />
+          <img
+          src="/images/check-icon.png"
+          alt="Check"
+          class="w-10 md:w-12 absolute left-20 bottom-20"
+          />
+          <img
+          src="/images/passport-icon.png"
+          alt="Passport"
+          class="w-10 md:w-12 absolute right-20 top-16"
+          />
+          <img
+          src="/images/suitcase-icon.png"
+          alt="Suitcase"
+          class="w-10 md:w-12 absolute right-10 bottom-20"
+          /> -->
+      </div>
+      <!-- Overlay -->
+      <div
+        id="importantModal"
+        class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden"
+      >
+        <div
+          class="bg-white rounded-3xl max-w-[1105px] w-full mx-4 px-8 py-7 text-center shadow-lg relative"
+        >
+          <button
+            id="closeModalBtn"
+            class="absolute top-5 right-5 text-gray-500 hover:text-black w-[45px] h-[45px] p-[10px] rounded-[22.5px] shadow-[0_4px_25px_0_#03139D40]"
+          >
+            ✕
+          </button>
+          <img
+            src="images/intro-dialog-character.png"
+            alt="Character"
+            class="w-[255px] h-[265px] mx-auto mb-4"
+          />
+          <div
+            style="
+              background: linear-gradient(
+                0deg,
+                rgba(255, 255, 255, 0.37),
+                rgba(255, 255, 255, 0.37)
+              );
+              backdrop-filter: blur(85.0199966430664px);
+            "
+          >
+            <!-- Step 1 -->
+            <div id="step1Content" class="">
+              <h2 class="text-lg md:text-[32px] font-bold text-[#03139D] mb-4">
+                Aviso importante
+              </h2>
+              <div class="max-w-[600px] mx-auto">
+                <p class="text-black-700 text-[22px] leading-normal mb-6">
+                  Esta plataforma es una simulación orientativa,
+                  <strong>NO</strong> un proceso oficial de solicitud de visa.
+                  Su propósito es ayudarte a mejorar la preparación y
+                  presentación de tu solicitud real.
+                </p>
+              </div>
+            </div>
+            <!-- Step 2 -->
+            <div id="step2Content" class="hidden">
+              <h2 class="text-lg md:text-[32px] font-bold text-[#03139D] mb-4">
+                A continuación...
+              </h2>
+              <div class="max-w-[600px] mx-auto">
+                <p class="text-black-700 text-[22px] leading-normal mb-6">
+                  Seguirás 5 pasos donde evaluaremos tu información con base en
+                  parámetros históricos de recomendaciones consulares. Al
+                  finalizar, recibirás una evaluación basada en dichos
+                  parámetros.
+                </p>
+              </div>
+            </div>
+            <!-- Step 3 -->
+            <div id="step3Content" class="hidden">
+              <h2 class="text-lg md:text-[32px] font-bold text-[#03139D] mb-4">
+                Recuerda
+              </h2>
+              <div class="max-w-[600px] mx-auto">
+                <p class="text-black-700 text-[22px] leading-normal mb-6">
+                  Este ejercicio no garantiza la aprobación de una visani
+                  reemplaza la decisión de ninguna autoridad consular oficial.
+                </p>
+                <div class="flex items-center justify-center space-x-2">
+                  <input type="checkbox" id="docsCheck" class="w-5 h-5" />
+                  <label for="docsCheck" class="text-gray-700 text-sm"
+                    >Entiendo el propósito de esta consulta</label
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Progress & Next Button -->
+            <!-- Progress + Next -->
+            <div
+              id="progressSection"
+              class="flex items-center justify-center space-x-4 mt-6"
+            >
+              <div class="flex items-center space-x-1">
+                <div
+                  id="bar1"
+                  class="w-[46px] h-[3px] bg-[#03139D] rounded-full"
+                ></div>
+                <div
+                  id="bar2"
+                  class="w-[46px] h-[3px] bg-gray-300 rounded-full"
+                ></div>
+                <div
+                  id="bar3"
+                  class="w-[46px] h-[3px] bg-gray-300 rounded-full"
+                ></div>
+              </div>
+              <button
+                id="nextStepBtn"
+                class="w-16 h-12 rounded-2xl bg-[#F5F5F5] text-[#03139D] flex items-center justify-center hover:bg-white-900"
+              >
+                <img src="images/arrow-blue.png" />
+              </button>
+            </div>
+            <!-- Submit Button (Hidden initially) -->
+            <div id="submitSection" class="mt-6 hidden">
+              <a
+                id=""
+                class="bg-[#03139D] text-white px-6 py-3 rounded-xl hover:bg-blue-900"
+                href="simulator.html"
+                >Comenzar</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    const openModalBtn = document.getElementById("openModalBtn");
+    const closeModalBtn = document.getElementById("closeModalBtn");
+    const modal = document.getElementById("importantModal");
+
+    openModalBtn.addEventListener("click", () => {
+      modal.classList.remove("hidden");
+    });
+
+    closeModalBtn.addEventListener("click", () => {
+      modal.classList.add("hidden");
+    });
+
+    const steps = ["step1Content", "step2Content", "step3Content"];
+    const bars = ["bar1", "bar2", "bar3"];
+    let index = 0;
+
+    const progressSection = document.getElementById("progressSection");
+    const submitSection = document.getElementById("submitSection");
+
+    document.getElementById("nextStepBtn").addEventListener("click", () => {
+      if (index < steps.length - 1) {
+        document.getElementById(steps[index]).classList.add("hidden");
+        index++;
+        document.getElementById(steps[index]).classList.remove("hidden");
+
+        // Progress Bar Update
+        bars.forEach((bar, i) => {
+          document
+            .getElementById(bar)
+            .classList.toggle("bg-[#03139D]", i <= index);
+          document
+            .getElementById(bar)
+            .classList.toggle("bg-gray-300", i > index);
+        });
+
+        // Swap to Submit on Last Step
+        if (index === steps.length - 1) {
+          progressSection.classList.add("hidden");
+          submitSection.classList.remove("hidden");
+        }
+      }
+    });
+
+    document.getElementById("closeModalBtn").addEventListener("click", () => {
+      document.getElementById("importantModal").classList.add("hidden");
+      resetModal();
+    });
+
+    function resetModal() {
+      index = 0;
+      steps.forEach((step, i) => {
+        document.getElementById(step).classList.toggle("hidden", i !== 0);
+      });
+      bars.forEach((bar, i) => {
+        document.getElementById(bar).classList.toggle("bg-[#03139D]", i === 0);
+        document.getElementById(bar).classList.toggle("bg-gray-300", i !== 0);
+      });
+      progressSection.classList.remove("hidden");
+      submitSection.classList.add("hidden");
+    }
+
+    // document.getElementById('submitSection').addEventListener('click', () => {
+    //   // modal.classList.add('hidden');
+    // });
+  </script>
+</html>

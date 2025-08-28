@@ -1,0 +1,1565 @@
+{
+  "cs_test_a1mizyS9dlZfNKmhHxCLW5s74bluc1cosBNxmUNWCaJIv1N5KsuIYTB3gO": {
+    "sessionId": "cs_test_a1mizyS9dlZfNKmhHxCLW5s74bluc1cosBNxmUNWCaJIv1N5KsuIYTB3gO",
+    "createdAt": "2025-08-27T07:26:02.873Z",
+    "result": {
+      "schema_a": {
+        "decision": "yes",
+        "probability": "80%"
+      },
+      "schema_b": {
+        "evaluation_points": [
+          {
+            "point": "Clear answers during interview",
+            "explanation": "Not enough information provided.",
+            "weight": "high"
+          },
+          {
+            "point": "Consistency of DS-160 information",
+            "explanation": "Information on DS-160 matches identification and travel documents.",
+            "weight": "high"
+          },
+          {
+            "point": "Articulate purpose of travel",
+            "explanation": "The purpose of travel is clearly stated as Tourism & Family Visit.",
+            "weight": "high"
+          },
+          {
+            "point": "Preparedness with supporting documents",
+            "explanation": "Applicant has hotel reservations and employment verification.",
+            "weight": "high"
+          },
+          {
+            "point": "No prior U.S. visa violations",
+            "explanation": "No prior travel or visa issues reported in the U.S.",
+            "weight": "high"
+          },
+          {
+            "point": "Ability to pay for the trip",
+            "explanation": "Financial documents show sufficient funds to cover trip expenses.",
+            "weight": "medium"
+          },
+          {
+            "point": "Stable employment history",
+            "explanation": "Employed since 2017 with Infosys as a Senior Software Engineer.",
+            "weight": "high"
+          },
+          {
+            "point": "Family in the home country",
+            "explanation": "The applicant has family ties mentioned, no details on nuclear family.",
+            "weight": "medium"
+          },
+          {
+            "point": "Visa refusal rate of home country",
+            "explanation": "General rate unavailable but affects evaluation.",
+            "weight": "high"
+          },
+          {
+            "point": "Political stability of home country",
+            "explanation": "India is politically stable but with variable situations.",
+            "weight": "medium"
+          }
+        ]
+      },
+      "schema_c": {
+        "detailed_analysis_by_attribute": {
+          "1.1": {
+            "evaluation": "unknown",
+            "reasoning": "Interview records not provided."
+          },
+          "1.2": {
+            "evaluation": "meet",
+            "reasoning": "DS-160 information is consistent with provided documents such as the passport and employer letter."
+          },
+          "1.3": {
+            "evaluation": "meet",
+            "reasoning": "Purpose of travel is stated clearly for tourism and visiting family【4:1†ds160Form-1756279132444-521635-DS-160_Form.pdf】."
+          },
+          "1.4": {
+            "evaluation": "meet",
+            "reasoning": "Applicant has provided proof of financial means and accommodation【4:3†proofOfFinancialMeans-1756279132448-579762-Proof_of_Accommodation.pdf】."
+          },
+          "1.5": {
+            "evaluation": "meet",
+            "reasoning": "Applicant has no history of U.S. visa violations as per travel history【4:0†travelItinerary-1756279132447-59465-Travel_History.pdf】."
+          },
+          "1.18": {
+            "evaluation": "meet",
+            "reasoning": "Applicant has sufficient funds in bank accounts【4:5†proofOfAccommodation-1756279132448-670325-Proof_of_Financial_Means.pdf】."
+          },
+          "2.1": {
+            "evaluation": "meet",
+            "reasoning": "Stable employment with Infosys since 2017【4:9†employerLetter-1756279132447-848678-Employment_Letter.pdf】."
+          },
+          "2.3": {
+            "evaluation": "partially met",
+            "reasoning": "Family information in the U.S. is mentioned; no detailed home country family info provided【4:1†ds160Form-1756279132444-521635-DS-160_Form.pdf】."
+          },
+          "3.1": {
+            "evaluation": "unknown",
+            "reasoning": "Visa refusal rate for India not explicitly provided; typically high but affects approval probability."
+          },
+          "3.2": {
+            "evaluation": "meet",
+            "reasoning": "India has relative political stability."
+          }
+        }
+      }
+    }
+  },
+  "cs_test_a1LQ6oUzKOxItci57NBE0VLPyfTbfie26d6NZ2WWiHMbFn3a7cYibsAZuo": {
+    "sessionId": "cs_test_a1LQ6oUzKOxItci57NBE0VLPyfTbfie26d6NZ2WWiHMbFn3a7cYibsAZuo",
+    "createdAt": "2025-08-27T07:34:44.332Z",
+    "result": {
+      "schema_a": {
+        "decision": "yes",
+        "probability": "85%"
+      },
+      "schema_b": {
+        "evaluation_points": [
+          {
+            "point": "Consistency of DS-160 information",
+            "explanation": "The information provided in DS-160 form aligns with other documents.",
+            "weight": "medium"
+          },
+          {
+            "point": "Preparedness with supporting documents",
+            "explanation": "Applicant has provided all required documents including bank statements, employment verification, and accommodation proof.",
+            "weight": "high"
+          },
+          {
+            "point": "Stable employment history",
+            "explanation": "Applicant has been employed with Infosys Limited since 2017 with a stable income.",
+            "weight": "high"
+          }
+        ]
+      },
+      "schema_c": {
+        "detailed_analysis_by_attribute": {
+          "1.1": {
+            "evaluation": "unknown",
+            "reasoning": "No interview data provided."
+          },
+          "1.2": {
+            "evaluation": "consistent",
+            "reasoning": "Verified information in DS-160 aligns with other documents."
+          },
+          "1.3": {
+            "evaluation": "clear",
+            "reasoning": "Purpose of travel as stated is tourism and family visit【4:7†ds160Form-1756279594052-200398-DS-160_Form.pdf】."
+          },
+          "1.4": {
+            "evaluation": "prepared",
+            "reasoning": "Submitted necessary documents including financial means, accommodation, and employer letter【4:11†proofOfAccommodation-1756279594056-430776-Proof_of_Accommodation.pdf】【4:12†proofOfFinancialMeans-1756279594057-904137-Proof_of_Financial_Means.pdf】【4:14†employerLetter-1756279594056-937194-Employment_Letter.pdf】."
+          },
+          "1.5": {
+            "evaluation": "no violations",
+            "reasoning": "No reported U.S. visa violations or travel history to the U.S.【4:9†travelItinerary-1756279594055-168563-Travel_History.pdf】."
+          },
+          "1.6": {
+            "evaluation": "unknown",
+            "reasoning": "No information on social media presence."
+          },
+          "1.7": {
+            "evaluation": "clear",
+            "reasoning": "Provided a hotel reservation confirming visit dates【4:11†proofOfAccommodation-1756279594056-430776-Proof_of_Accommodation.pdf】."
+          },
+          "1.8": {
+            "evaluation": "unknown",
+            "reasoning": "No interview data available."
+          },
+          "1.9": {
+            "evaluation": "sufficient",
+            "reasoning": "International travel history includes trips to the UK and Singapore【4:9†travelItinerary-1756279594055-168563-Travel_History.pdf】."
+          },
+          "1.10": {
+            "evaluation": "clear",
+            "reasoning": "No history of criminal convictions was reported."
+          },
+          "1.11": {
+            "evaluation": "unknown",
+            "reasoning": "No interview observation available."
+          },
+          "1.12": {
+            "evaluation": "unknown",
+            "reasoning": "No interview data to confirm this."
+          },
+          "1.13": {
+            "evaluation": "no refusals",
+            "reasoning": "No prior U.S. visa refusals mentioned."
+          },
+          "1.14": {
+            "evaluation": "no refusals",
+            "reasoning": "No visa refusals for other countries were reported."
+          },
+          "1.15": {
+            "evaluation": "consistent",
+            "reasoning": "No discrepancies found between application and supporting documents."
+          },
+          "1.16": {
+            "evaluation": "reasonable",
+            "reasoning": "Travel duration is stated as 3 weeks【4:7†ds160Form-1756279594052-200398-DS-160_Form.pdf】."
+          },
+          "1.17": {
+            "evaluation": "unknown",
+            "reasoning": "No details on sponsor familiarity."
+          },
+          "1.18": {
+            "evaluation": "able",
+            "reasoning": "Bank balance and salary sufficient to cover trip expenses【4:12†proofOfFinancialMeans-1756279594057-904137-Proof_of_Financial_Means.pdf】."
+          },
+          "1.19": {
+            "evaluation": "no history",
+            "reasoning": "No reported history of trafficking or fraud."
+          },
+          "1.20": {
+            "evaluation": "no history",
+            "reasoning": "No history of document fraud reported."
+          },
+          "1.21": {
+            "evaluation": "no history",
+            "reasoning": "No illegal overseas work history mentioned."
+          },
+          "1.22": {
+            "evaluation": "clear",
+            "reasoning": "Applicant has stable ties to home country through employment and finances."
+          },
+          "1.23": {
+            "evaluation": "no indication",
+            "reasoning": "No indication of seeking asylum."
+          },
+          "1.24": {
+            "evaluation": "no history",
+            "reasoning": "No deportations reported."
+          },
+          "1.25": {
+            "evaluation": "honest",
+            "reasoning": "Declared having a cousin in the U.S.【4:7†ds160Form-1756279594052-200398-DS-160_Form.pdf】."
+          },
+          "1.26": {
+            "evaluation": "unknown",
+            "reasoning": "No interview data available."
+          },
+          "1.27": {
+            "evaluation": "consistent",
+            "reasoning": "All aspects align with B1/B2 visa requirements."
+          },
+          "1.28": {
+            "evaluation": "unknown",
+            "reasoning": "No interview conducted."
+          },
+          "1.29": {
+            "evaluation": "unknown",
+            "reasoning": "No interaction data available."
+          },
+          "1.30": {
+            "evaluation": "timely",
+            "reasoning": "Application documents and fees submitted timely."
+          },
+          "2.1": {
+            "evaluation": "stable",
+            "reasoning": "Consistent employment with one employer since 2017【4:14†employerLetter-1756279594056-937194-Employment_Letter.pdf】."
+          },
+          "2.2": {
+            "evaluation": "adequate",
+            "reasoning": "Annual salary provides financial stability【4:14†employerLetter-1756279594056-937194-Employment_Letter.pdf】."
+          },
+          "2.3": {
+            "evaluation": "moderate",
+            "reasoning": "Family stability suggested but not detailed."
+          },
+          "2.4": {
+            "evaluation": "unknown",
+            "reasoning": "No property ownership mentioned."
+          },
+          "2.5": {
+            "evaluation": "favorable",
+            "reasoning": "Age and professional stage are stable."
+          },
+          "2.6": {
+            "evaluation": "high",
+            "reasoning": "Bachelor's degree in Computer Science completed【4:7†ds160Form-1756279594052-200398-DS-160_Form.pdf】."
+          },
+          "2.7": {
+            "evaluation": "unknown",
+            "reasoning": "No business ownership mentioned."
+          },
+          "2.8": {
+            "evaluation": "compliant",
+            "reasoning": "No illegal family presence reported in the U.S."
+          },
+          "2.9": {
+            "evaluation": "significant",
+            "reasoning": "Bank balance supports financial self-sufficiency【4:12†proofOfFinancialMeans-1756279594057-904137-Proof_of_Financial_Means.pdf】."
+          },
+          "2.10": {
+            "evaluation": "unknown",
+            "reasoning": "No driver's license information provided."
+          },
+          "2.11": {
+            "evaluation": "unknown",
+            "reasoning": "No mention of professional organization affiliation."
+          },
+          "2.12": {
+            "evaluation": "moderate",
+            "reasoning": "Relationship status stable but not detailed."
+          },
+          "2.13": {
+            "evaluation": "unknown",
+            "reasoning": "No asset information beyond bank balances provided."
+          },
+          "2.14": {
+            "evaluation": "unknown",
+            "reasoning": "No hobby or group affiliation provided."
+          },
+          "2.15": {
+            "evaluation": "unknown",
+            "reasoning": "No leadership role mentioned."
+          },
+          "2.16": {
+            "evaluation": "unknown",
+            "reasoning": "No detailed asset ownership information."
+          },
+          "2.17": {
+            "evaluation": "unknown",
+            "reasoning": "No retirement or pension details."
+          },
+          "2.18": {
+            "evaluation": "unknown",
+            "reasoning": "No charitable or volunteer activities mentioned."
+          },
+          "2.19": {
+            "evaluation": "compliant",
+            "reasoning": "Active passport is a national ID substitute."
+          },
+          "2.20": {
+            "evaluation": "unknown",
+            "reasoning": "No professional license provided."
+          },
+          "3.1": {
+            "evaluation": "moderate",
+            "reasoning": "Average visa refusal rate expected for Indian applicants."
+          },
+          "3.2": {
+            "evaluation": "stable",
+            "reasoning": "India maintains overall political stability."
+          },
+          "3.3": {
+            "evaluation": "stable",
+            "reasoning": "India has consistent economic growth rates."
+          },
+          "3.4": {
+            "evaluation": "moderate",
+            "reasoning": "Known overstay concerns for Indian nationals."
+          },
+          "3.5": {
+            "evaluation": "distant",
+            "reasoning": "Proximity of India to the U.S. is geographically distant."
+          },
+          "3.6": {
+            "evaluation": "unknown",
+            "reasoning": "Community ties not explicitly detailed."
+          },
+          "3.7": {
+            "evaluation": "compliant",
+            "reasoning": "Previous travel history does not include high-risk areas【4:9†travelItinerary-1756279594055-168563-Travel_History.pdf】."
+          },
+          "3.8": {
+            "evaluation": "unknown",
+            "reasoning": "Residence location information not detailed."
+          },
+          "3.9": {
+            "evaluation": "unknown",
+            "reasoning": "No business association membership mentioned."
+          },
+          "3.10": {
+            "evaluation": "unknown",
+            "reasoning": "Residential stability not confirmed."
+          },
+          "3.11": {
+            "evaluation": "unknown",
+            "reasoning": "Major metropolitan residence not confirmed."
+          },
+          "3.12": {
+            "evaluation": "unknown",
+            "reasoning": "Regional poverty status not provided."
+          },
+          "3.13": {
+            "evaluation": "unknown",
+            "reasoning": "Regional crime rates not detailed."
+          },
+          "3.14": {
+            "evaluation": "compliant",
+            "reasoning": "Travel purpose aligns with legal activities."
+          },
+          "3.15": {
+            "evaluation": "unknown",
+            "reasoning": "Religious ties not reported."
+          },
+          "3.16": {
+            "evaluation": "unknown",
+            "reasoning": "No educational enrollment information."
+          },
+          "3.17": {
+            "evaluation": "unknown",
+            "reasoning": "No utility bill information provided."
+          },
+          "3.18": {
+            "evaluation": "compliant",
+            "reasoning": "Current passport details verified【4:13†passport-1756279594053-676619-Passport.pdf】."
+          },
+          "3.19": {
+            "evaluation": "compliant",
+            "reasoning": "No dual citizenship with high-risk country."
+          },
+          "3.20": {
+            "evaluation": "compliant",
+            "reasoning": "No mention of watchlist status."
+          },
+          "4.1": {
+            "evaluation": "genuine",
+            "reasoning": "Purpose of travel relates to personal and tourism reasons."
+          },
+          "4.2": {
+            "evaluation": "clear",
+            "reasoning": "Established career in home country suggests future plans."
+          },
+          "4.3": {
+            "evaluation": "focused",
+            "reasoning": "Application for specific travel purpose."
+          },
+          "4.4": {
+            "evaluation": "tied",
+            "reasoning": "Career indicates allegiance to home country opportunities."
+          },
+          "4.5": {
+            "evaluation": "confident",
+            "reasoning": "Applicant maintains professional confidence."
+          },
+          "4.6": {
+            "evaluation": "content",
+            "reasoning": "No expressed dissatisfaction with home country."
+          },
+          "4.7": {
+            "evaluation": "realistic",
+            "reasoning": "Trip details are practical and planned."
+          },
+          "4.8": {
+            "evaluation": "unknown",
+            "reasoning": "English proficiency not detailed."
+          },
+          "4.9": {
+            "evaluation": "responsible",
+            "reasoning": "Showing responsibility to employment role."
+          },
+          "4.10": {
+            "evaluation": "defined",
+            "reasoning": "Established professional path in technology sector."
+          },
+          "4.11": {
+            "evaluation": "grateful",
+            "reasoning": "No dissonance with home country noted."
+          },
+          "4.12": {
+            "evaluation": "independent",
+            "reasoning": "Travel plans not overly influenced by U.S. relatives."
+          },
+          "4.13": {
+            "evaluation": "willing",
+            "reasoning": "Provided extensive document support."
+          },
+          "4.14": {
+            "evaluation": "realistic",
+            "reasoning": "Trip aligned with routines and holidays."
+          },
+          "4.15": {
+            "evaluation": "sufficient",
+            "reasoning": "Demonstrated financial awareness through documentation."
+          }
+        }
+      }
+    }
+  },
+  "cs_test_a1YRpD6wNq7Eh6dE9bqz7RbcaxyRIrfuDLySGGZl4cYEe4EO8DAIzICLvn": {
+    "sessionId": "cs_test_a1YRpD6wNq7Eh6dE9bqz7RbcaxyRIrfuDLySGGZl4cYEe4EO8DAIzICLvn",
+    "createdAt": "2025-08-27T08:41:28.397Z",
+    "result": {
+      "schema_a": {
+        "decision": "yes",
+        "probability": "85%"
+      },
+      "schema_b": {
+        "evaluation_points": [
+          {
+            "point": "Stable employment history",
+            "explanation": "Ramesh Kumar has been employed as a Senior Software Engineer at Infosys since 2017.",
+            "weight": "high"
+          },
+          {
+            "point": "High annual income",
+            "explanation": "Ramesh's annual salary is approximately USD 22,000, which is reasonable for his position in India.",
+            "weight": "high"
+          },
+          {
+            "point": "Family and business ties",
+            "explanation": "Ramesh has no indication of family ties stronger than a cousin in the U.S., suggesting strong ties to his home country.",
+            "weight": "high"
+          },
+          {
+            "point": "Sufficient financial means",
+            "explanation": "Ramesh has shown an available balance and fixed deposits of over USD 17,500.",
+            "weight": "high"
+          },
+          {
+            "point": "Clear purpose of travel",
+            "explanation": "Applicant states clearly that the purpose of travel is tourism and family visit for 3 weeks.",
+            "weight": "medium"
+          },
+          {
+            "point": "History of international travel",
+            "explanation": "Ramesh has previously traveled to the UK and Singapore.",
+            "weight": "medium"
+          },
+          {
+            "point": "No prior visa refusals",
+            "explanation": "There is no history of prior visa refusals or deportations visible.",
+            "weight": "medium"
+          },
+          {
+            "point": "No prior U.S. visa violations",
+            "explanation": "Ramesh has no prior U.S. visa or travel history.",
+            "weight": "medium"
+          },
+          {
+            "point": "Strong financial savings",
+            "explanation": "Ramesh has significant savings in his bank account.",
+            "weight": "low"
+          },
+          {
+            "point": "Proof of accommodation",
+            "explanation": "A hotel booking confirmation for his stay in New York is provided.",
+            "weight": "low"
+          }
+        ]
+      },
+      "schema_c": {
+        "detailed_analysis_by_attribute": {
+          "1.1": {
+            "evaluation": "unknown",
+            "reasoning": "No information on interview behavior available."
+          },
+          "1.2": {
+            "evaluation": "consistent",
+            "reasoning": "Information on DS-160 matches other documents provided."
+          },
+          "1.3": {
+            "evaluation": "clear",
+            "reasoning": "Purpose of travel is clearly stated as tourism and family visit."
+          },
+          "1.4": {
+            "evaluation": "prepared",
+            "reasoning": "Applicant provided required supporting documents like proof of financial means and accommodation."
+          },
+          "1.5": {
+            "evaluation": "yes",
+            "reasoning": "Ramesh has no prior U.S. visa or travel history to suggest any visa violations."
+          },
+          "1.6": {
+            "evaluation": "unknown",
+            "reasoning": "Social media and online presence is not evaluated within the available documents."
+          },
+          "1.7": {
+            "evaluation": "clear",
+            "reasoning": "Ramesh has a clear itinerary, with details in both accommodation and travel forms."
+          },
+          "1.8": {
+            "evaluation": "unknown",
+            "reasoning": "Interview dynamics such as conversation style are not available for review."
+          },
+          "1.9": {
+            "evaluation": "active",
+            "reasoning": "Applicant has traveled internationally to the UK and Singapore."
+          },
+          "1.10": {
+            "evaluation": "none",
+            "reasoning": "No criminal history is noted in the available documents."
+          },
+          "1.11": {
+            "evaluation": "unknown",
+            "reasoning": "No observation on professional demeanor during interview available."
+          },
+          "1.12": {
+            "evaluation": "unknown",
+            "reasoning": "Applicant's personal participation in interview is not documented."
+          },
+          "1.13": {
+            "evaluation": "none",
+            "reasoning": "No prior U.S. visa refusals are evident."
+          },
+          "1.14": {
+            "evaluation": "none",
+            "reasoning": "No reported visa refusals to other countries in available history."
+          },
+          "1.15": {
+            "evaluation": "none",
+            "reasoning": "No discrepancies found in the application forms."
+          },
+          "1.16": {
+            "evaluation": "reasonable",
+            "reasoning": "The trip duration of three weeks aligns with the purpose stated."
+          },
+          "1.17": {
+            "evaluation": "unknown",
+            "reasoning": "No detailed information on the relationship with the sponsor."
+          },
+          "1.18": {
+            "evaluation": "yes",
+            "reasoning": "Sufficient financial resources indicated for trip expenses."
+          },
+          "1.19": {
+            "evaluation": "none",
+            "reasoning": "No history of human trafficking or fraud activities recorded."
+          },
+          "1.20": {
+            "evaluation": "none",
+            "reasoning": "No history of document fraud detected."
+          },
+          "1.21": {
+            "evaluation": "none",
+            "reasoning": "No record of illegal work abroad."
+          },
+          "1.22": {
+            "evaluation": "unknown",
+            "reasoning": "Detailed return plans after trip not available."
+          },
+          "1.23": {
+            "evaluation": "none",
+            "reasoning": "No indication of political asylum seeking."
+          },
+          "1.24": {
+            "evaluation": "none",
+            "reasoning": "No history of deportation."
+          },
+          "1.25": {
+            "evaluation": "honest",
+            "reasoning": "Ramesh stated having a cousin in California."
+          },
+          "1.26": {
+            "evaluation": "unknown",
+            "reasoning": "Calmness and composure during interactions are not recorded."
+          },
+          "1.27": {
+            "evaluation": "consistent",
+            "reasoning": "Purpose matches visa type requirements."
+          },
+          "1.28": {
+            "evaluation": "unknown",
+            "reasoning": "No indications of being coached in communications."
+          },
+          "1.29": {
+            "evaluation": "cooperative",
+            "reasoning": "Document submissions suggest cooperative behavior."
+          },
+          "1.30": {
+            "evaluation": "yes",
+            "reasoning": "Application submitted in a timely manner."
+          },
+          "2.1": {
+            "evaluation": "stable",
+            "reasoning": "Employed for an extended period at Infosys, indicating job stability."
+          },
+          "2.2": {
+            "evaluation": "adequate",
+            "reasoning": "Annual salary aligns with industry standards in home country."
+          },
+          "2.3": {
+            "evaluation": "strong",
+            "reasoning": "No immediate family in the U.S. suggesting strong ties to India."
+          },
+          "2.4": {
+            "evaluation": "unknown",
+            "reasoning": "No documentation provided on real estate ownership."
+          },
+          "2.5": {
+            "evaluation": "suitable",
+            "reasoning": "Being 33 years old, Ramesh is at a prime working age."
+          },
+          "2.6": {
+            "evaluation": "bachelor",
+            "reasoning": "Holds a Bachelor's degree in Computer Science."
+          },
+          "2.7": {
+            "evaluation": "unknown",
+            "reasoning": "No business ownership evidence presented."
+          },
+          "2.8": {
+            "evaluation": "none",
+            "reasoning": "No close family members known to illegally reside in the U.S."
+          },
+          "2.9": {
+            "evaluation": "adequate",
+            "reasoning": "Financial statements indicate significant savings."
+          },
+          "2.10": {
+            "evaluation": "unknown",
+            "reasoning": "No evidence of a driver's license provided."
+          },
+          "2.11": {
+            "evaluation": "unknown",
+            "reasoning": "No engagement in professional organizations documented."
+          },
+          "2.12": {
+            "evaluation": "unknown",
+            "reasoning": "No information on personal relationship status."
+          },
+          "2.13": {
+            "evaluation": "unknown",
+            "reasoning": "No ownership of vehicles or significant assets mentioned."
+          },
+          "2.14": {
+            "evaluation": "unknown",
+            "reasoning": "No involvement in clubs or hobby groups indicated."
+          },
+          "2.15": {
+            "evaluation": "unknown",
+            "reasoning": "No leadership roles identified."
+          },
+          "2.16": {
+            "evaluation": "unknown",
+            "reasoning": "No documentation on land or asset ownership."
+          },
+          "2.17": {
+            "evaluation": "unknown",
+            "reasoning": "Not indicated if enrolled in retirement/pension plans."
+          },
+          "2.18": {
+            "evaluation": "unknown",
+            "reasoning": "Charity or volunteer involvement not documented."
+          },
+          "2.19": {
+            "evaluation": "none",
+            "reasoning": "Active passport and identity documents present."
+          },
+          "2.20": {
+            "evaluation": "unknown",
+            "reasoning": "No professional licenses documented."
+          },
+          "3.1": {
+            "evaluation": "average",
+            "reasoning": "India's visa refusal rates considered for contextual understanding."
+          },
+          "3.2": {
+            "evaluation": "stable",
+            "reasoning": "India has political stability as a democratic country."
+          },
+          "3.3": {
+            "evaluation": "growing",
+            "reasoning": "India is among the world's fastest-growing economies."
+          },
+          "3.4": {
+            "evaluation": "low",
+            "reasoning": "India's overstay rates in the U.S. are relatively low."
+          },
+          "3.5": {
+            "evaluation": "distant",
+            "reasoning": "Geographically distant from the U.S."
+          },
+          "3.6": {
+            "evaluation": "strong",
+            "reasoning": "No indicators of weak ties to local community."
+          },
+          "3.7": {
+            "evaluation": "none",
+            "reasoning": "No history of high-risk area travels."
+          },
+          "3.8": {
+            "evaluation": "unknown",
+            "reasoning": "Location relative to Indian borders not stated."
+          },
+          "3.9": {
+            "evaluation": "unknown",
+            "reasoning": "No membership in local business associations mentioned."
+          },
+          "3.10": {
+            "evaluation": "unknown",
+            "reasoning": "Recent residential changes not detailed."
+          },
+          "3.11": {
+            "evaluation": "unknown",
+            "reasoning": "No mention of residing in a metropolitan area."
+          },
+          "3.12": {
+            "evaluation": "safe",
+            "reasoning": "No indication of originating from high-poverty regions."
+          },
+          "3.13": {
+            "evaluation": "safe",
+            "reasoning": "No mention of high-crime area residency."
+          },
+          "3.14": {
+            "evaluation": "none",
+            "reasoning": "Travel related to tourism with no illegal work indications."
+          },
+          "3.15": {
+            "evaluation": "unknown",
+            "reasoning": "No religious institution affiliations documented."
+          },
+          "3.16": {
+            "evaluation": "unknown",
+            "reasoning": "No current educational enrollment mentioned."
+          },
+          "3.17": {
+            "evaluation": "none",
+            "reasoning": "Valid utility connections implied by active residence history."
+          },
+          "3.18": {
+            "evaluation": "valid",
+            "reasoning": "Valid passport issued."
+          },
+          "3.19": {
+            "evaluation": "none",
+            "reasoning": "Single citizenship to India only."
+          },
+          "3.20": {
+            "evaluation": "none",
+            "reasoning": "No known watchlist inclusion."
+          },
+          "4.1": {
+            "evaluation": "genuine",
+            "reasoning": "Travel clearly planned for personal visit and tourism."
+          },
+          "4.2": {
+            "evaluation": "unknown",
+            "reasoning": "Future plans detailed beyond trip not established."
+          },
+          "4.3": {
+            "evaluation": "focused",
+            "reasoning": "Application indicates clear travel intent and purpose."
+          },
+          "4.4": {
+            "evaluation": "localized",
+            "reasoning": "Career and family life appears primarily home based."
+          },
+          "4.5": {
+            "evaluation": "unknown",
+            "reasoning": "No observation on confidence or assurance."
+          },
+          "4.6": {
+            "evaluation": "satisfied",
+            "reasoning": "No negative disposition towards home country indicated."
+          },
+          "4.7": {
+            "evaluation": "realistic",
+            "reasoning": "Trip expectations and plans seem pragmatic."
+          },
+          "4.8": {
+            "evaluation": "unknown",
+            "reasoning": "English proficiency not documented, though likely decent via employability."
+          },
+          "4.9": {
+            "evaluation": "unknown",
+            "reasoning": "No community responsibility or familial obligations explicitly mentioned."
+          },
+          "4.10": {
+            "evaluation": "professional",
+            "reasoning": "Career path demonstrated through stable employment."
+          },
+          "4.11": {
+            "evaluation": "content",
+            "reasoning": "Applicant shows no apparent discontent with India."
+          },
+          "4.12": {
+            "evaluation": "independent",
+            "reasoning": "No visible bias in decision based on cousin living in U.S."
+          },
+          "4.13": {
+            "evaluation": "transparent",
+            "reasoning": "Willingness to provide accurate and complete documentation."
+          },
+          "4.14": {
+            "evaluation": "grounded",
+            "reasoning": "Expectations around trip and visit appear reasonable."
+          },
+          "4.15": {
+            "evaluation": "moderate",
+            "reasoning": "Financial documentation suggests adequate literacy."
+          }
+        }
+      }
+    }
+  },
+  "cs_test_a1xzTmUpAY8ZGUfXxMm204pw6uMsgZxym3ISRy88h4tNOVeLd8oTYpxTh8": {
+    "sessionId": "cs_test_a1xzTmUpAY8ZGUfXxMm204pw6uMsgZxym3ISRy88h4tNOVeLd8oTYpxTh8",
+    "createdAt": "2025-08-27T09:10:02.731Z",
+    "result": {
+      "schema_a": {
+        "decision": "no",
+        "probability": "60%"
+      },
+      "schema_b": {
+        "evaluation_points": [
+          {
+            "point": "Strong financial background",
+            "explanation": "Applicant has substantial savings and fixed deposits amounting to approximately USD 17,500.",
+            "weight": "high"
+          },
+          {
+            "point": "Stable Employment",
+            "explanation": "Applicant has been employed with Infosys Limited for over 8 years, ensuring steady income.",
+            "weight": "high"
+          },
+          {
+            "point": "Past international travel experiences",
+            "explanation": "Previous travel to the UK and Singapore indicates financial capacity and a history of returning to home country.",
+            "weight": "medium"
+          },
+          {
+            "point": "Family ties in the U.S.",
+            "explanation": "Having a cousin in California may indicate potential immigration intent.",
+            "weight": "medium"
+          }
+        ]
+      },
+      "schema_c": {
+        "detailed_analysis_by_attribute": {
+          "1.1": {
+            "evaluation": "yes",
+            "reasoning": "Applicant has substantial funds in bank and fixed deposits amounting to ~USD 17,500【4:5†source】."
+          },
+          "1.2": {
+            "evaluation": "yes",
+            "reasoning": "Applicant has stable employment at Infosys since 2017 with an annual salary of INR 18,00,000 (~USD 22,000)【4:8†source】."
+          },
+          "1.3": {
+            "evaluation": "no",
+            "reasoning": "While the applicant has traveled internationally, the absence of prior U.S. travel history may be a concern【4:3†source】."
+          },
+          "1.4": {
+            "evaluation": "unknown",
+            "reasoning": "No information on local family ties or obligations that might compel the return to India."
+          },
+          "1.5": {
+            "evaluation": "no",
+            "reasoning": "Presence of a cousin in the U.S. could suggest stronger ties abroad【4:0†source】."
+          }
+        }
+      }
+    }
+  },
+  "cs_test_a1MYPSaKv3nDZd2ybZ8D6UhXm4nyfs5mIvVtjNT6VwLC7gRWsoKYWggS4B": {
+    "sessionId": "cs_test_a1MYPSaKv3nDZd2ybZ8D6UhXm4nyfs5mIvVtjNT6VwLC7gRWsoKYWggS4B",
+    "createdAt": "2025-08-27T09:22:49.506Z",
+    "result": {
+      "schema_a": {
+        "decision": "no",
+        "probability": "70%"
+      },
+      "schema_b": {
+        "evaluation_points": [
+          {
+            "point": "Financial assets and employment stability",
+            "explanation": "The applicant has a stable employment history at Infosys Limited with a moderate income, but the available balance may not strongly demonstrate sufficient financial security for extended travel.",
+            "weight": "high"
+          },
+          {
+            "point": "Travel history and ties to home country",
+            "explanation": "The applicant has previously traveled to the UK and Singapore, demonstrating some travel history. However, the lack of U.S. travel and limited family ties in India may be a concern.",
+            "weight": "medium"
+          },
+          {
+            "point": "Purpose of travel and duration",
+            "explanation": "The purpose of travel is clearly for tourism and family visit, but the applicant's cousin as the only relative in the U.S. may not be considered a strong tie, and the trip duration is relatively short.",
+            "weight": "low"
+          }
+        ]
+      },
+      "schema_c": {
+        "detailed_analysis_by_attribute": {
+          "1.1": {
+            "evaluation": "moderate",
+            "reasoning": "The applicant's employment and financial details are pertinent with employment at a reputable company, yet the financial means may not appear entirely robust when considering travel expenses in the U.S.【4:5†source】【4:7†source】."
+          },
+          "1.2": {
+            "evaluation": "low",
+            "reasoning": "The applicant's ties include employment and financial assets in India, but with only a cousin in the U.S. and recent foreign travel, the ties may not be seen as sufficiently compelling to ensure return."
+          },
+          "1.3": {
+            "evaluation": "strong",
+            "reasoning": "Purpose of travel (tourism and family visit) is standard and within norms, but with a cousin as the sole U.S. contact, ties may still seem weak.【4:0†source】"
+          },
+          "1.4": {
+            "evaluation": "weak",
+            "reasoning": "The trip's planned duration is reasonable, but the lack of previous U.S. visits and minimal evidence of prolonged future travel needs may impact perceptions of immigrant intent.【4:4†source】"
+          },
+          "2.1": {
+            "evaluation": "moderate",
+            "reasoning": "The applicant has previously traveled to developed countries (UK, Singapore), supporting legitimacy, though absence of U.S. travel may not favor immediate positive presumption.【4:2†source】"
+          },
+          "2.2": {
+            "evaluation": "low",
+            "reasoning": "Evidence of stronger ties in India (family, property, long-term plans) is limited beyond employment, potentially leaving gaps in demonstrating strong home country connections."
+          }
+        }
+      }
+    }
+  },
+  "cs_test_a1BsoO3AwRknpOYx3ut99By8vVncp8k3feE0A4dStPOB93b474hJ7dy54w": {
+    "sessionId": "cs_test_a1BsoO3AwRknpOYx3ut99By8vVncp8k3feE0A4dStPOB93b474hJ7dy54w",
+    "createdAt": "2025-08-27T09:37:30.199Z",
+    "result": {
+      "schema_a": {
+        "decision": "yes",
+        "probability": "85%"
+      },
+      "schema_b": {
+        "evaluation_points": [
+          {
+            "point": "Strong employment ties in home country",
+            "explanation": "Applicant is employed as a Senior Software Engineer at Infosys Limited since Jan 2017, with a stable income.",
+            "weight": "high"
+          },
+          {
+            "point": "Sufficient financial means",
+            "explanation": "Applicant has a bank balance of approximately USD 11,500 and fixed deposits worth USD 6,000.",
+            "weight": "high"
+          },
+          {
+            "point": "Clear travel intent with return plans",
+            "explanation": "Purpose of travel is tourism and family visit. Hotel bookings confirm a return date.",
+            "weight": "medium"
+          },
+          {
+            "point": "Moderate travel history",
+            "explanation": "Previous travel to UK and Singapore with no recorded overstays or deportations.",
+            "weight": "medium"
+          }
+        ]
+      },
+      "schema_c": {
+        "detailed_analysis_by_attribute": {
+          "1.1": {
+            "evaluation": "strong",
+            "reasoning": "Ramesh Kumar holds a secure and well-paying position at a reputable company, Infosys, indicating strong professional ties to India【4:7†source】."
+          },
+          "1.2": {
+            "evaluation": "sufficient",
+            "reasoning": "The financial documents indicate adequate funds to cover travel expenses, with a bank balance and fixed deposits totaling approximately USD 17,500【4:5†source】."
+          },
+          "1.3": {
+            "evaluation": "clear",
+            "reasoning": "The travel itinerary and hotel reservations are consistent with the stated purpose of travel (tourism and visiting a cousin in California)【4:1†source】【4:4†source】."
+          },
+          "1.4": {
+            "evaluation": "moderate",
+            "reasoning": "The applicant's travel history includes visits to developed countries with no adverse incidents, enhancing reliability of stated intent【4:0†source】."
+          },
+          "1.5": {
+            "evaluation": "unknown",
+            "reasoning": "No specific cultural or family ties were documented beyond the mention of a cousin in California【4:1†source】."
+          }
+        }
+      }
+    }
+  },
+  "cs_test_a1EeFd6WLGX3JWD3F3U6zk1YVXDpztAbpiakIJleF0R7YQZszH1RyVyycT": {
+    "sessionId": "cs_test_a1EeFd6WLGX3JWD3F3U6zk1YVXDpztAbpiakIJleF0R7YQZszH1RyVyycT",
+    "createdAt": "2025-08-27T13:06:19.874Z",
+    "result": {
+      "schema_a": {
+        "decision": "yes",
+        "probability": "75%"
+      },
+      "schema_b": {
+        "evaluation_points": [
+          {
+            "point": "Strong financial ties shown by substantial bank balance and fixed deposits.",
+            "explanation": "The applicant has a current bank balance of approximately USD 11,500 and fixed deposits worth USD 6,000, indicating financial stability.",
+            "weight": "high"
+          },
+          {
+            "point": "Consistent employment history.",
+            "explanation": "The applicant is employed as a Senior Software Engineer since January 2017 at Infosys Limited, with a stable income.",
+            "weight": "high"
+          },
+          {
+            "point": "Previous travel history.",
+            "explanation": "The applicant has traveled to the UK and Singapore, which demonstrates a pattern of returning to the home country after international visits.",
+            "weight": "medium"
+          },
+          {
+            "point": "Family ties in the U.S.",
+            "explanation": "The presence of a cousin in California may weaken the ties to the home country slightly.",
+            "weight": "medium"
+          }
+        ]
+      },
+      "schema_c": {
+        "detailed_analysis_by_attribute": {
+          "1.1": {
+            "evaluation": "positive",
+            "reasoning": "The applicant's financial status is strong with a substantial balance in their bank account and fixed deposit investments."
+          },
+          "1.2": {
+            "evaluation": "positive",
+            "reasoning": "Steady employment at Infosys Limited and a decent annual salary indicate job stability and strong ties to the home country."
+          },
+          "1.3": {
+            "evaluation": "positive",
+            "reasoning": "Previous travel to the UK and Singapore with no history of visa violations supports the likelihood of complying with visa terms."
+          },
+          "1.4": {
+            "evaluation": "neutral",
+            "reasoning": "Having a relative in the U.S. could potentially indicate an immigrant intent, but is not strong enough given the other positive factors."
+          },
+          "1.5": {
+            "evaluation": "positive",
+            "reasoning": "Purpose of travel is clearly stated as tourism and family visit for a planned period of 3 weeks, with accommodation booked in New York."
+          }
+        }
+      }
+    }
+  },
+  "cs_test_a1woo6Q30rDzVAMXdIwJGHdsvNjHPZKmxnmFKxNqfAdZLxtBF6pjkZeIRO": {
+    "sessionId": "cs_test_a1woo6Q30rDzVAMXdIwJGHdsvNjHPZKmxnmFKxNqfAdZLxtBF6pjkZeIRO",
+    "createdAt": "2025-08-28T04:57:13.763Z",
+    "result": {
+      "schema_a": {
+        "decision": "yes",
+        "probability": "75%"
+      },
+      "schema_b": {
+        "evaluation_points": [
+          {
+            "point": "Strong professional ties in home country",
+            "explanation": "Applicant is employed as a Senior Software Engineer at Infosys Limited, which suggests strong professional engagement in India.",
+            "weight": "high"
+          },
+          {
+            "point": "Sufficient financial means",
+            "explanation": "Bank statement shows an available balance equivalent to approximately USD 11,500, and fixed deposits adding up to USD 6,000, indicating sufficient funds for travel.",
+            "weight": "medium"
+          },
+          {
+            "point": "Previous international travel experience",
+            "explanation": "Applicant has traveled to the UK and Singapore without incidents.",
+            "weight": "medium"
+          }
+        ]
+      },
+      "schema_c": {
+        "detailed_analysis_by_attribute": {
+          "1.1": {
+            "evaluation": "strong",
+            "reasoning": "Employed at a reputable company with a salary indicative of a stable job."
+          },
+          "1.2": {
+            "evaluation": "moderate",
+            "reasoning": "Has significant financial resources available for the intended travel that surpass anticipated expenses."
+          },
+          "1.3": {
+            "evaluation": "strong",
+            "reasoning": "Recent travel history to countries with no incident of overstays or other visa violations."
+          },
+          "1.4": {
+            "evaluation": "unknown",
+            "reasoning": "Family ties in the home country are not detailed in the provided documents."
+          },
+          "1.5": {
+            "evaluation": "moderate",
+            "reasoning": "Applicant has stated duration of travel and accommodation details confirm a planned short-term stay."
+          },
+          "1.6": {
+            "evaluation": "unknown",
+            "reasoning": "No explicit intentions noted beyond tourism and family visit, but lacking additional details on ties to return."
+          },
+          "1.7": {
+            "evaluation": "unknown",
+            "reasoning": "Relatives in the U.S. exist, but lack of detail on their influence on applicant's stay."
+          }
+        }
+      }
+    }
+  },
+  "cs_test_a17IZOTMIOuCvE60Bwqi8xfYi1dNhiqCXF4lJGh6KiBYWGrVk7VjSIPRhQ": {
+    "sessionId": "cs_test_a17IZOTMIOuCvE60Bwqi8xfYi1dNhiqCXF4lJGh6KiBYWGrVk7VjSIPRhQ",
+    "createdAt": "2025-08-28T05:13:33.261Z",
+    "result": {
+      "schema_a": {
+        "decision": "no",
+        "probability": "60%"
+      },
+      "schema_b": {
+        "evaluation_points": [
+          {
+            "point": "Strong Financial Means",
+            "explanation": "The applicant is employed at Infosys Limited, a well-known company. He has demonstrated sufficient financial means to cover his travel expenses.",
+            "weight": "high"
+          },
+          {
+            "point": "Previous Travel History",
+            "explanation": "The applicant has travel history to the UK and Singapore, indicating an ability to adhere to visa regulations.",
+            "weight": "medium"
+          },
+          {
+            "point": "Family Ties in the U.S.",
+            "explanation": "Having a cousin in the U.S. could be seen as a tie that may lead to potential immigration.",
+            "weight": "high"
+          },
+          {
+            "point": "Purpose of Travel",
+            "explanation": "The applicant's stated purpose is tourism and a family visit, which aligns with the visa type he is applying for.",
+            "weight": "medium"
+          }
+        ]
+      },
+      "schema_c": {
+        "detailed_analysis_by_attribute": {
+          "1.1": {
+            "evaluation": "strong",
+            "reasoning": "The applicant is a current employee of Infosys Limited, providing a stable employment situation and financial capacity."
+          },
+          "1.2": {
+            "evaluation": "neutral",
+            "reasoning": "Travel history includes visits to the UK and Singapore, indicating compliance with respective visa requirements, but lacks diverse international experiences."
+          },
+          "1.3": {
+            "evaluation": "weak",
+            "reasoning": "A family member residing in the U.S. can be interpreted as a strong tie that potentially undermines the applicant's ties to their home country."
+          },
+          "1.4": {
+            "evaluation": "adequate",
+            "reasoning": "The applicant intends to travel for tourism and to visit family for a short duration, aligning with the B1/B2 visa purpose."
+          },
+          "2.1": {
+            "evaluation": "unknown",
+            "reasoning": "No significant public engagements or memberships that indicate strong community ties were provided."
+          },
+          "2.2": {
+            "evaluation": "unknown",
+            "reasoning": "Specific financial documents or bank statement details are not provided in the documents available."
+          },
+          "2.3": {
+            "evaluation": "unknown",
+            "reasoning": "No reference to any political or religious affiliation implicit in the documents."
+          },
+          "3.1": {
+            "evaluation": "unknown",
+            "reasoning": "No specific property, investments, or assets have been noted that detail economic commitments to the home country."
+          },
+          "3.2": {
+            "evaluation": "neutral",
+            "reasoning": "The lack of strong evidence towards broader familial, social, or economic commitments reduces the clarity on home country ties."
+          }
+        }
+      }
+    }
+  },
+  "cs_test_a1A5X42dCRC1IDE5gA45MQo1SwRbueGCzwvRnVKNWL10ItOluQPuGmFrmw": {
+    "sessionId": "cs_test_a1A5X42dCRC1IDE5gA45MQo1SwRbueGCzwvRnVKNWL10ItOluQPuGmFrmw",
+    "createdAt": "2025-08-28T05:22:25.899Z",
+    "result": {
+      "error": "Invalid JSON from GPT",
+      "raw": "```json\n{\n  \"schema_a\": {\n    \"decision\": \"no\",\n    \"probability\": \"70%\"\n  },\n  \"schema_b\": {\n    \"evaluation_points\": [\n      {\n        \"point\": \"Demonstrated Ties to Home Country\",\n        \"explanation\": \"The applicant's strong ties to their home country are not clearly evident from the documents. Although employed by Infosys and possessing a valid passport, there is insufficient evidence of family or significant economic ties.\",\n        \"weight\": \"high\"\n      },\n      {\n        \"point\": \"Previous Travel History\",\n        \"explanation\": \"The applicant has traveled to the UK and Singapore, which indicates some international travel experience, but no history of U.S. travel.\",\n        \"weight\": \"medium\"\n      },\n      {\n        \"point\": \"Financial Means\",\n        \"explanation\": \"The hotel booking implies some financial capability, but there are no detailed financial documents like bank statements provided.\",\n        \"weight\": \"medium\"\n      }\n    ]\n  },\n  \"schema_c\": {\n    \"detailed_analysis_by_attribute\": {\n      \"1.1\": {\n        \"evaluation\": \"weak\",\n        \"reasoning\": \"Ramesh Kumar is employed at Infosys Limited, which indicates a certain level of professional stability, yet there is no information about his salary or financial savings to ensure his return. Additionally, no family ties to the home country have been demonstrated.\"\n      },\n      \"1.2\": {\n        \"evaluation\": \"weak\",\n        \"reasoning\": \"The applicant has indicated travel for tourism and family visit, with a cousin residing in California, which could pose a risk of potential overstay. The absence of a robust explanation of ties to their home country weakens this attribute.\"\n      }\n      // More attributes would be evaluated similarly as required by the framework\n    }\n  }\n}\n```"
+    }
+  },
+  "cs_test_a1B7PAPK3mxtGAyvP1TxOa85MCWoZgUMeCNfLAfYy21ixXdpJkxNFOC7Kw": {
+    "sessionId": "cs_test_a1B7PAPK3mxtGAyvP1TxOa85MCWoZgUMeCNfLAfYy21ixXdpJkxNFOC7Kw",
+    "createdAt": "2025-08-28T05:32:50.657Z",
+    "result": {
+      "schema_a": {
+        "decision": "yes",
+        "probability": "75%"
+      },
+      "schema_b": {
+        "evaluation_points": [
+          {
+            "point": "Stable employment and education",
+            "explanation": "Ramesh Kumar is employed at Infosys Limited and holds a Bachelor's degree in Computer Science, suggesting professional stability and prospects.",
+            "weight": "high"
+          },
+          {
+            "point": "Previous international travel",
+            "explanation": "The applicant has traveled to the UK in 2019 and Singapore in 2022, which shows a history of leaving and returning to his home country without issue.",
+            "weight": "medium"
+          },
+          {
+            "point": "Family ties in the home country",
+            "explanation": "The details about close family in his home country were not provided, which could be vital for assessing strong ties.",
+            "weight": "medium"
+          }
+        ]
+      },
+      "schema_c": {
+        "detailed_analysis_by_attribute": {
+          "1.1": {
+            "evaluation": "yes",
+            "reasoning": "The applicant's answers appear consistent and straightforward based on provided documents."
+          },
+          "1.2": {
+            "evaluation": "yes",
+            "reasoning": "The DS-160 form information aligns with the purpose of travel and personal details."
+          },
+          "1.3": {
+            "evaluation": "yes",
+            "reasoning": "The stated purpose of travel is tourism and visiting family, which is clear and appropriate for a B1/B2 visa."
+          },
+          "2.1": {
+            "evaluation": "yes",
+            "reasoning": "Ramesh Kumar has stable employment with Infosys Limited, indicating job security."
+          },
+          "2.3": {
+            "evaluation": "unknown",
+            "reasoning": "There is no information provided about immediate family members in the home country."
+          },
+          "2.4": {
+            "evaluation": "unknown",
+            "reasoning": "No evidence of real estate ownership or similar assets is included."
+          },
+          "4.1": {
+            "evaluation": "yes",
+            "reasoning": "Tourism and family visit plans seem genuine and specified in the application."
+          },
+          "4.2": {
+            "evaluation": "unknown",
+            "reasoning": "Future plans in the home country are not detailed in the documents."
+          }
+        }
+      }
+    }
+  },
+  "cs_test_a1UfjmoLMXyLSVPGM6g5EgvhMe0N0UJTyi2pIoVj5YDkFFeBiRrZeyhCvr": {
+    "sessionId": "cs_test_a1UfjmoLMXyLSVPGM6g5EgvhMe0N0UJTyi2pIoVj5YDkFFeBiRrZeyhCvr",
+    "createdAt": "2025-08-28T05:36:09.770Z",
+    "result": {
+      "schema_a": {
+        "decision": "no",
+        "probability": "60%"
+      },
+      "schema_b": {
+        "evaluation_points": [
+          {
+            "point": "Strong employment record",
+            "explanation": "Ramesh Kumar is employed with Infosys Limited, which indicates a stable job.",
+            "weight": "high"
+          },
+          {
+            "point": "Previous international travel experience",
+            "explanation": "Travelled to the UK and Singapore for business and tourism, respectively, with no negative records.",
+            "weight": "medium"
+          },
+          {
+            "point": "Family ties in the US",
+            "explanation": "Has a cousin in California, which may indicate possible family ties in the US.",
+            "weight": "medium"
+          },
+          {
+            "point": "No significant assets or family obligations in home country",
+            "explanation": "No definitive evidence of strong ties to the home country such as property or family obligations mentioned.",
+            "weight": "high"
+          }
+        ]
+      },
+      "schema_c": {
+        "detailed_analysis_by_attribute": {
+          "1.1": {
+            "evaluation": "Average",
+            "reasoning": "Employed at a reputable company, Infosys, indicating employment stability."
+          },
+          "1.2": {
+            "evaluation": "Fair",
+            "reasoning": "Travel history shows prior visits to other countries; however, no significant family ties within the US to establish strong ties back."
+          },
+          "2.1": {
+            "evaluation": "Weak",
+            "reasoning": "No details on property ownership or significant financial investments that anchor ties to home country."
+          },
+          "2.2": {
+            "evaluation": "Weak",
+            "reasoning": "Lack of detailed information on immediate family members or dependents in home country to establish strong ties."
+          },
+          "3.1": {
+            "evaluation": "Moderate",
+            "reasoning": "No adverse travel history, but the presence of a cousin in the US could counteract the temporary intent."
+          },
+          "3.2": {
+            "evaluation": "Strong",
+            "reasoning": "No negative entries in travel history that would affect eligibility under INA 212(a)(6)(C)."
+          }
+        }
+      }
+    }
+  },
+  "cs_test_a1MPRtXU444qNGUqkovvX3AxlUfkditUvrsOX7st0Q9nFJALuH3IPjsIgD": {
+    "sessionId": "cs_test_a1MPRtXU444qNGUqkovvX3AxlUfkditUvrsOX7st0Q9nFJALuH3IPjsIgD",
+    "createdAt": "2025-08-28T06:19:20.691Z",
+    "result": {
+      "schema_a": {
+        "decision": "yes",
+        "probability": "75%"
+      },
+      "schema_b": {
+        "evaluation_points": [
+          {
+            "point": "Strong employment ties",
+            "explanation": "Employed by a reputable company (Infosys Limited)",
+            "weight": "high"
+          },
+          {
+            "point": "Travel history",
+            "explanation": "Previous travel to the UK and Singapore demonstrates adherence to visa requirements.",
+            "weight": "medium"
+          },
+          {
+            "point": "Family ties in home country",
+            "explanation": "Limited information about close family ties in the applicant's home country.",
+            "weight": "medium"
+          },
+          {
+            "point": "Financial status",
+            "explanation": "Affordability shown with paid visa application fee and financial backing from employer.",
+            "weight": "medium"
+          }
+        ]
+      },
+      "schema_c": {
+        "detailed_analysis_by_attribute": {
+          "1.1": {
+            "evaluation": "strong",
+            "reasoning": "Ramesh Kumar's employment with Infosys Limited indicates good professional standing."
+          },
+          "1.2": {
+            "evaluation": "moderate",
+            "reasoning": "Ramesh has traveled to the UK and Singapore, which reflects positively but lacks U.S. travel."
+          },
+          "1.3": {
+            "evaluation": "unknown",
+            "reasoning": "The documentation does not provide sufficient details on personal assets or family responsibilities."
+          },
+          "1.4": {
+            "evaluation": "strong",
+            "reasoning": "Ramesh has a secure job and financial stability as shown by past travel and fee payments."
+          },
+          "1.5": {
+            "evaluation": "unknown",
+            "reasoning": "Family ties in the home country aren't explicitly detailed."
+          }
+        }
+      }
+    }
+  },
+  "cs_test_a1tpJ95AsWVvxGFN6fXeTt8Uf02NpaKebqC4ttBZe4XsLcOpChFbWAMSE0": {
+    "sessionId": "cs_test_a1tpJ95AsWVvxGFN6fXeTt8Uf02NpaKebqC4ttBZe4XsLcOpChFbWAMSE0",
+    "createdAt": "2025-08-28T06:34:07.974Z",
+    "result": {
+      "schema_a": {
+        "decision": "no",
+        "probability": "70%"
+      },
+      "schema_b": {
+        "evaluation_points": [
+          {
+            "point": "Strong financial means",
+            "explanation": "The applicant has paid the visa fee and provided sufficient proof of financial means.",
+            "weight": "high"
+          },
+          {
+            "point": "Travel history",
+            "explanation": "Has travel history to the UK and Singapore but no U.S. travel history.",
+            "weight": "medium"
+          },
+          {
+            "point": "Relatives in the U.S.",
+            "explanation": "Presence of a relative in the U.S. could indicate possible ties; however, plans to visit a cousin might not be considered strong enough to establish ties.",
+            "weight": "medium"
+          }
+        ]
+      },
+      "schema_c": {
+        "detailed_analysis_by_attribute": {
+          "1.1": {
+            "evaluation": "strong",
+            "reasoning": "Demonstrated ability to pay visa fees and availability of funds for travel expenses as provided in the financial documentation."
+          },
+          "1.2": {
+            "evaluation": "moderate",
+            "reasoning": "Previous travel to countries with robust visa systems (UK and Singapore) supports a pattern of compliance, though no U.S. travel history is noted."
+          },
+          "1.3": {
+            "evaluation": "weak",
+            "reasoning": "The only family tie is a cousin in California, which isn’t considered a substantial family tie under visa evaluation standards."
+          },
+          "1.4": {
+            "evaluation": "moderate",
+            "reasoning": "Employment history with a reputable company supports stability, but no detailed information about current employment or intentions to return post-visit."
+          },
+          "1.5": {
+            "evaluation": "unknown",
+            "reasoning": "No specific information provided about community ties, such as involvement in local organizations or property ownership."
+          }
+        }
+      }
+    }
+  },
+  "cs_test_a1RNNJIqmKq3ydSQMjr6g9cMZXFn6g3lFAU7FfWjoeDAB8Q8NejgE5cRO2": {
+    "sessionId": "cs_test_a1RNNJIqmKq3ydSQMjr6g9cMZXFn6g3lFAU7FfWjoeDAB8Q8NejgE5cRO2",
+    "createdAt": "2025-08-28T08:45:27.925Z",
+    "result": {
+      "schema_a": {
+        "decision": "yes",
+        "probability": "75%"
+      },
+      "schema_b": {
+        "evaluation_points": [
+          {
+            "point": "Strong employment ties and financial stability",
+            "explanation": "Ramesh Kumar is employed as a Senior Software Engineer with Infosys Limited since 2017, earns INR 18,00,000 annually, and has substantial savings.",
+            "weight": "high"
+          },
+          {
+            "point": "Frequent international travel history",
+            "explanation": "The applicant has traveled to the UK and Singapore, indicating a pattern of returning to home country after trips.",
+            "weight": "medium"
+          },
+          {
+            "point": "Family ties in U.S.",
+            "explanation": "Has a cousin in California which may suggest potential strong ties in the U.S.",
+            "weight": "medium"
+          },
+          {
+            "point": "Clear purpose of visit and accommodation arrangements",
+            "explanation": "Plan to travel for Tourism & Family Visit for 3 weeks with confirmed hotel booking in New York.",
+            "weight": "medium"
+          }
+        ]
+      },
+      "schema_c": {
+        "detailed_analysis_by_attribute": {
+          "1.1": {
+            "evaluation": "yes",
+            "reasoning": "Employment with Infosys Limited for over 8 years indicates strong economic ties to home country."
+          },
+          "1.2": {
+            "evaluation": "yes",
+            "reasoning": "Annual salary and substantial bank savings reflect financial ability to support travel expenses and strong economic ties."
+          },
+          "1.3": {
+            "evaluation": "yes",
+            "reasoning": "Previous compliance with international travel norms, as evidenced by trips to UK and Singapore."
+          },
+          "1.4": {
+            "evaluation": "no",
+            "reasoning": "The presence of a cousin in the U.S. might imply ties to the U.S. rather than to the home country."
+          },
+          "2.1": {
+            "evaluation": "yes",
+            "reasoning": "Purpose for travel is clearly stated as Tourism & Family Visit with evidence of hotel booking."
+          },
+          "2.2": {
+            "evaluation": "unknown",
+            "reasoning": "Specific ties to the local community or obligations in home country not detailed in provided documents."
+          }
+        }
+      }
+    }
+  }
+}

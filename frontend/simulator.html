@@ -1,0 +1,1805 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selección Visa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .custom-scroll::-webkit-scrollbar {
+      width: 8px;
+      padding-right: 10px;
+    }
+
+    .custom-scroll::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background-color: #97BBE1;
+      border-radius: 10px;
+    }
+
+    .logo {
+      width: 150px;
+      position: absolute;
+      margin: 0px -30px;
+      z-index: 1000;
+    }
+
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+</head>
+
+<body class="bg-gray-50 h-screen">
+  <main class="px-[40px] py-[25px] h-full flex flex-col">
+    <!-- Header Steps -->
+    <!-- Sticky Top Nav -->
+
+    <header class="sticky top-0 z-40 bg-white">
+      <div
+        class="flex items-center justify-between h-20 rounded-[20px] shadow-[4px_4px_20px_0px_#0000001A] px-4 sm:px-6 bg-white max-w-[1400px] mx-auto">
+
+        <!-- Left: Logo -->
+        <a href="/" class="flex items-center shrink-0" aria-label="Home">
+          <img src="images/logo.png" class="h-[115px] sm:h-[90px] w-auto" alt="Logo" />
+        </a>
+
+        <!-- Center: Tabs (Desktop) -->
+        <nav class="hidden lg:block">
+          <ul class="flex -mb-px text-sm 2xl:text-base font-medium text-center text-gray-500">
+            <!-- Step 1 -->
+            <li class="me-2">
+              <a href="#" data-step="1"
+                class="inline-flex text-w items-center justify-center gap-2 2xl:gap-3 p-4 2xl:px-6 border-b-4 border-[#03139D] rounded-t-lg font-medium active group step-tab relative"
+                aria-current="page">
+                <img src="images/icon-visa-selection.svg" alt="" />
+                <div class="text-left whitespace-nowrap ">
+                  Selección visa
+                  <div id="completed-status-1"
+                    class="flex  items-center text-xs text-[#03139D]  hidden absolute -bottom-1 left-1/2 -translate-x-1/2">
+                    <span>Completed</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <!-- Step 2 -->
+            <li class="me-2">
+              <a href="#" data-step="2"
+                class="inline-flex items-center justify-center gap-2 2xl:gap-3 p-4 2xl:px-6 border-b-4 border-transparent rounded-t-lg text-black font-normal hover:border-[#03139D] group step-tab relative">
+                <img src="images/icon-form-and-documents.svg" alt="" />
+                <div class="text-left whitespace-nowrap">
+                  Formulario y documentos
+                  <!-- Internal steps indicator -->
+                  <div id="internalSteps" class="flex items-center  hidden absolute  left-1/2 -translate-x-1/2">
+                    <div class="flex items-center space-x-2">
+                      <div
+                        class="w-4 h-4 rounded-full bg-[#03139D] text-white text-[10px] flex items-center justify-center font-bold internal-step">
+                        1</div>
+                    </div>
+                    <div class="h-[2px] w-8 bg-gray-300"></div>
+                    <div class="flex items-center space-x-0">
+                      <div
+                        class="w-4 h-4 rounded-full bg-gray-200 text-gray-500 text-[10px] flex items-center justify-center font-bold internal-step">
+                        2</div>
+                    </div>
+                  </div>
+
+                  <div id="completed-status-2"
+                    class="flex items-center text-xs text-[#03139D]  hidden absolute -bottom-1 left-1/2 -translate-x-1/2">
+                    <span>Completed</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <!-- Step 3 -->
+            <li class="me-2">
+              <a href="#" data-step="3"
+                class="inline-flex items-center justify-center gap-2 2xl:gap-3 p-4 2xl:px-6 border-b-4 border-transparent rounded-t-lg text-black font-normal hover:border-[#03139D] group step-tab relative">
+                <img src="images/icon-video-of-intention.svg" alt="" />
+                <span class="whitespace-nowrap">Video de intención</span>
+                <div id="completed-status-3"
+                  class="flex items-center text-xs text-[#03139D] hidden absolute -bottom-1 left-1/2 -translate-x-1/2">
+                  <span>Completed</span>
+                </div>
+              </a>
+            </li>
+
+            <!-- Step 4 -->
+            <li class="me-2">
+              <a href="#" data-step="4"
+                class="inline-flex items-center justify-center gap-2 2xl:gap-3 p-4 2xl:px-6 border-b-4 border-transparent rounded-t-lg text-black font-normal hover:border-[#03139D] group step-tab relative">
+                <img src="images/icon-payment-review.svg" alt="" />
+                <span class="whitespace-nowrap">Pago revisión</span>
+                <div id="completed-status-4"
+                  class="flex items-center text-xs text-[#03139D] hidden absolute -bottom-1 left-1/2 -translate-x-1/2">
+                  <span>Completed</span>
+                </div>
+              </a>
+            </li>
+
+            <!-- Step 5 -->
+            <li class="me-2">
+              <a href="#" data-step="5"
+                class="inline-flex items-center justify-center gap-2 2xl:gap-3 p-4 2xl:px-6 border-b-4 border-transparent rounded-t-lg text-black font-normal hover:border-[#03139D] group step-tab relative">
+                <img src="images/icon-request-result.svg" alt="" />
+                <span class="whitespace-nowrap">Resultado solicitud</span>
+                <div id="completed-status-5"
+                  class="flex items-center text-xs text-[#03139D] hidden absolute -bottom-1 left-1/2 -translate-x-1/2">
+                  <span>Completed</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Right: Prev / Next (Desktop) -->
+        <div class="hidden lg:flex items-center gap-2">
+          <button id="prevBtn" type="button" class="px-4 py-2 border rounded-lg text-gray-700">
+            Atrás
+          </button>
+          <button id="nextBtn" type="button" class="px-4 py-2 bg-indigo-100 text-indigo-700 rounded-lg">
+            Siguiente
+          </button>
+        </div>
+
+        <!-- Mobile: Hamburger -->
+        <button id="navToggle" type="button"
+          class="lg:hidden inline-flex items-center justify-center p-2 rounded-lg border text-gray-700"
+          aria-label="Abrir navegación" aria-expanded="false" aria-controls="mobileNav">
+          <!-- Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Panel -->
+      <div id="mobileNav" class="lg:hidden max-w-[1400px] mx-auto px-4 sm:px-6 pt-3 pb-4 hidden">
+        <!-- Horizontal-scroll tabs on mobile -->
+        <div class="overflow-x-auto no-scrollbar">
+          <ul class="flex min-w-max gap-2 text-sm font-medium text-gray-600 snap-x snap-mandatory">
+            <!-- Clone of tabs for mobile, same hooks/classes -->
+            <li class="snap-start">
+              <a href="#" data-step="1"
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full border step-tab border-[#03139D] text-[#03139D] font-medium"
+                aria-current="page">
+                <img src="images/icon-visa-selection.svg" alt="" />
+                <span>Selección visa</span>
+              </a>
+            </li>
+            <li class="snap-start">
+              <a href="#" data-step="2"
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full border step-tab border-gray-300 text-gray-700">
+                <img src="images/icon-form-and-documents.svg" alt="" />
+                <span>Formulario</span>
+              </a>
+            </li>
+            <li class="snap-start">
+              <a href="#" data-step="3"
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full border step-tab border-gray-300 text-gray-700">
+                <img src="images/icon-video-of-intention.svg" alt="" />
+                <span>Video</span>
+              </a>
+            </li>
+            <li class="snap-start">
+              <a href="#" data-step="4"
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full border step-tab border-gray-300 text-gray-700">
+                <img src="images/icon-payment-review.svg" alt="" />
+                <span>Pago</span>
+              </a>
+            </li>
+            <li class="snap-start">
+              <a href="#" data-step="5"
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full border step-tab border-gray-300 text-gray-700">
+                <img src="images/icon-request-result.svg" alt="" />
+                <span>Resultado</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile Prev / Next -->
+        <div class="mt-3 flex items-center gap-2">
+          <button id="prevBtnMobile" type="button" class="flex-1 px-4 py-2 border rounded-lg text-gray-700">
+            Atrás
+          </button>
+          <button id="nextBtnMobile" type="button" class="flex-1 px-4 py-2 bg-indigo-100 text-indigo-700 rounded-lg">
+            Siguiente
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Optional: hide native scrollbar for horizontal tabs -->
+
+
+
+
+    <!-- Main Content -->
+    <div id="step1"
+      class="w-full mt-8 bg-white rounded-2xl shadow-md overflow-x-auto grid grid-cols-1 xl:grid-cols-[600px_1fr]">
+
+      <!-- Left Image -->
+      <div class="h-64 sm:h-80 md:h-[400px] xl:h-[400px]">
+        <img src="images/step-1-img.png" alt="Visa Flags" class="w-full h-full bject-center object-cover" />
+      </div>
+
+      <!-- Right Content -->
+      <div class="p-6 sm:p-8 lg:p-10 xl:max-w-[756px]">
+        <p class="text-gray-500 text-sm md:text-base mb-2">Paso 01</p>
+        <h1 class="text-2xl md:text-[32px] font-semibold text-gray-900 mb-4">
+          Selección Visa
+        </h1>
+        <p class="text-gray-700 mb-6 md:text-[22px]">
+          Elige el país al que deseas viajar y el tipo de visa que se ajusta a tu propósito:
+          turismo, estudios, trabajo u otra categoría.
+        </p>
+
+        <!-- Form -->
+        <div class="space-y-6 xl:max-w-[598px]">
+          <!-- Country -->
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">
+              Seleccionar país de destino
+            </label>
+            <select id="countrySelect"
+              class="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-500">
+              <option>Pais</option>
+              <option value="AF">Afghanistan</option>
+              <option value="AX">Åland Islands</option>
+              <option value="AL">Albania</option>
+              <option value="DZ">Algeria</option>
+              <option value="AS">American Samoa</option>
+              <option value="AD">Andorra</option>
+              <option value="AO">Angola</option>
+              <option value="AI">Anguilla</option>
+              <option value="AQ">Antarctica</option>
+              <option value="AG">Antigua and Barbuda</option>
+              <option value="AR">Argentina</option>
+              <option value="AM">Armenia</option>
+              <option value="AW">Aruba</option>
+              <option value="AU">Australia</option>
+              <option value="AT">Austria</option>
+              <option value="AZ">Azerbaijan</option>
+              <option value="BS">Bahamas</option>
+              <option value="BH">Bahrain</option>
+              <option value="BD">Bangladesh</option>
+              <option value="BB">Barbados</option>
+              <option value="BY">Belarus</option>
+              <option value="BE">Belgium</option>
+              <option value="BZ">Belize</option>
+              <option value="BJ">Benin</option>
+              <option value="BM">Bermuda</option>
+              <option value="BT">Bhutan</option>
+              <option value="BO">Bolivia (Plurinational State of)</option>
+              <option value="BA">Bosnia and Herzegovina</option>
+              <option value="BW">Botswana</option>
+              <option value="BV">Bouvet Island</option>
+              <option value="BR">Brazil</option>
+              <option value="IO">British Indian Ocean Territory</option>
+              <option value="BN">Brunei Darussalam</option>
+              <option value="BG">Bulgaria</option>
+              <option value="BF">Burkina Faso</option>
+              <option value="BI">Burundi</option>
+              <option value="CV">Cabo Verde</option>
+              <option value="KH">Cambodia</option>
+              <option value="CM">Cameroon</option>
+              <option value="CA">Canada</option>
+              <option value="BQ">Caribbean Netherlands</option>
+              <option value="KY">Cayman Islands</option>
+              <option value="CF">Central African Republic</option>
+              <option value="TD">Chad</option>
+              <option value="CL">Chile</option>
+              <option value="CN">China</option>
+              <option value="CX">Christmas Island</option>
+              <option value="CC">Cocos (Keeling) Islands</option>
+              <option value="CO">Colombia</option>
+              <option value="KM">Comoros</option>
+              <option value="CG">Congo</option>
+              <option value="CD">Congo, Democratic Republic of the</option>
+              <option value="CK">Cook Islands</option>
+              <option value="CR">Costa Rica</option>
+              <option value="HR">Croatia</option>
+              <option value="CU">Cuba</option>
+              <option value="CW">Curaçao</option>
+              <option value="CY">Cyprus</option>
+              <option value="CZ">Czech Republic</option>
+              <option value="CI">Côte d'Ivoire</option>
+              <option value="DK">Denmark</option>
+              <option value="DJ">Djibouti</option>
+              <option value="DM">Dominica</option>
+              <option value="DO">Dominican Republic</option>
+              <option value="EC">Ecuador</option>
+              <option value="EG">Egypt</option>
+              <option value="SV">El Salvador</option>
+              <option value="GQ">Equatorial Guinea</option>
+              <option value="ER">Eritrea</option>
+              <option value="EE">Estonia</option>
+              <option value="SZ">Eswatini (Swaziland)</option>
+              <option value="ET">Ethiopia</option>
+              <option value="FK">Falkland Islands (Malvinas)</option>
+              <option value="FO">Faroe Islands</option>
+              <option value="FJ">Fiji</option>
+              <option value="FI">Finland</option>
+              <option value="FR">France</option>
+              <option value="GF">French Guiana</option>
+              <option value="PF">French Polynesia</option>
+              <option value="TF">French Southern Territories</option>
+              <option value="GA">Gabon</option>
+              <option value="GM">Gambia</option>
+              <option value="GE">Georgia</option>
+              <option value="DE">Germany</option>
+              <option value="GH">Ghana</option>
+              <option value="GI">Gibraltar</option>
+              <option value="GR">Greece</option>
+              <option value="GL">Greenland</option>
+              <option value="GD">Grenada</option>
+              <option value="GP">Guadeloupe</option>
+              <option value="GU">Guam</option>
+              <option value="GT">Guatemala</option>
+              <option value="GG">Guernsey</option>
+              <option value="GN">Guinea</option>
+              <option value="GW">Guinea-Bissau</option>
+              <option value="GY">Guyana</option>
+              <option value="HT">Haiti</option>
+              <option value="HM">Heard Island and Mcdonald Islands</option>
+              <option value="HN">Honduras</option>
+              <option value="HK">Hong Kong</option>
+              <option value="HU">Hungary</option>
+              <option value="IS">Iceland</option>
+              <option value="IN">India</option>
+              <option value="ID">Indonesia</option>
+              <option value="IR">Iran</option>
+              <option value="IQ">Iraq</option>
+              <option value="IE">Ireland</option>
+              <option value="IM">Isle of Man</option>
+              <option value="IL">Israel</option>
+              <option value="IT">Italy</option>
+              <option value="JM">Jamaica</option>
+              <option value="JP">Japan</option>
+              <option value="JE">Jersey</option>
+              <option value="JO">Jordan</option>
+              <option value="KZ">Kazakhstan</option>
+              <option value="KE">Kenya</option>
+              <option value="KI">Kiribati</option>
+              <option value="KP">Korea, North</option>
+              <option value="KR">Korea, South</option>
+              <option value="XK">Kosovo</option>
+              <option value="KW">Kuwait</option>
+              <option value="KG">Kyrgyzstan</option>
+              <option value="LA">Lao People's Democratic Republic</option>
+              <option value="LV">Latvia</option>
+              <option value="LB">Lebanon</option>
+              <option value="LS">Lesotho</option>
+              <option value="LR">Liberia</option>
+              <option value="LY">Libya</option>
+              <option value="LI">Liechtenstein</option>
+              <option value="LT">Lithuania</option>
+              <option value="LU">Luxembourg</option>
+              <option value="MO">Macao</option>
+              <option value="MK">Macedonia North</option>
+              <option value="MG">Madagascar</option>
+              <option value="MW">Malawi</option>
+              <option value="MY">Malaysia</option>
+              <option value="MV">Maldives</option>
+              <option value="ML">Mali</option>
+              <option value="MT">Malta</option>
+              <option value="MH">Marshall Islands</option>
+              <option value="MQ">Martinique</option>
+              <option value="MR">Mauritania</option>
+              <option value="MU">Mauritius</option>
+              <option value="YT">Mayotte</option>
+              <option value="MX">Mexico</option>
+              <option value="FM">Micronesia</option>
+              <option value="MD">Moldova</option>
+              <option value="MC">Monaco</option>
+              <option value="MN">Mongolia</option>
+              <option value="ME">Montenegro</option>
+              <option value="MS">Montserrat</option>
+              <option value="MA">Morocco</option>
+              <option value="MZ">Mozambique</option>
+              <option value="MM">Myanmar (Burma)</option>
+              <option value="NA">Namibia</option>
+              <option value="NR">Nauru</option>
+              <option value="NP">Nepal</option>
+              <option value="NL">Netherlands</option>
+              <option value="AN">Netherlands Antilles</option>
+              <option value="NC">New Caledonia</option>
+              <option value="NZ">New Zealand</option>
+              <option value="NI">Nicaragua</option>
+              <option value="NE">Niger</option>
+              <option value="NG">Nigeria</option>
+              <option value="NU">Niue</option>
+              <option value="NF">Norfolk Island</option>
+              <option value="MP">Northern Mariana Islands</option>
+              <option value="NO">Norway</option>
+              <option value="OM">Oman</option>
+              <option value="PK">Pakistan</option>
+              <option value="PW">Palau</option>
+              <option value="PS">Palestine</option>
+              <option value="PA">Panama</option>
+              <option value="PG">Papua New Guinea</option>
+              <option value="PY">Paraguay</option>
+              <option value="PE">Peru</option>
+              <option value="PH">Philippines</option>
+              <option value="PN">Pitcairn Islands</option>
+              <option value="PL">Poland</option>
+              <option value="PT">Portugal</option>
+              <option value="PR">Puerto Rico</option>
+              <option value="QA">Qatar</option>
+              <option value="RE">Reunion</option>
+              <option value="RO">Romania</option>
+              <option value="RU">Russian Federation</option>
+              <option value="RW">Rwanda</option>
+              <option value="BL">Saint Barthelemy</option>
+              <option value="SH">Saint Helena</option>
+              <option value="KN">Saint Kitts and Nevis</option>
+              <option value="LC">Saint Lucia</option>
+              <option value="MF">Saint Martin</option>
+              <option value="PM">Saint Pierre and Miquelon</option>
+              <option value="VC">Saint Vincent and the Grenadines</option>
+              <option value="WS">Samoa</option>
+              <option value="SM">San Marino</option>
+              <option value="ST">Sao Tome and Principe</option>
+              <option value="SA">Saudi Arabia</option>
+              <option value="SN">Senegal</option>
+              <option value="RS">Serbia</option>
+              <option value="CS">Serbia and Montenegro</option>
+              <option value="SC">Seychelles</option>
+              <option value="SL">Sierra Leone</option>
+              <option value="SG">Singapore</option>
+              <option value="SX">Sint Maarten</option>
+              <option value="SK">Slovakia</option>
+              <option value="SI">Slovenia</option>
+              <option value="SB">Solomon Islands</option>
+              <option value="SO">Somalia</option>
+              <option value="ZA">South Africa</option>
+              <option value="GS">South Georgia and the South Sandwich Islands</option>
+              <option value="SS">South Sudan</option>
+              <option value="ES">Spain</option>
+              <option value="LK">Sri Lanka</option>
+              <option value="SD">Sudan</option>
+              <option value="SR">Suriname</option>
+              <option value="SJ">Svalbard and Jan Mayen</option>
+              <option value="SE">Sweden</option>
+              <option value="CH">Switzerland</option>
+              <option value="SY">Syria</option>
+              <option value="TW">Taiwan</option>
+              <option value="TJ">Tajikistan</option>
+              <option value="TZ">Tanzania</option>
+              <option value="TH">Thailand</option>
+              <option value="TL">Timor-Leste</option>
+              <option value="TG">Togo</option>
+              <option value="TK">Tokelau</option>
+              <option value="TO">Tonga</option>
+              <option value="TT">Trinidad and Tobago</option>
+              <option value="TN">Tunisia</option>
+              <option value="TR">Turkey (Türkiye)</option>
+              <option value="TM">Turkmenistan</option>
+              <option value="TC">Turks and Caicos Islands</option>
+              <option value="TV">Tuvalu</option>
+              <option value="UM">U.S. Outlying Islands</option>
+              <option value="UG">Uganda</option>
+              <option value="UA">Ukraine</option>
+              <option value="AE">United Arab Emirates</option>
+              <option value="GB">United Kingdom</option>
+              <option value="US">United States</option>
+              <option value="UY">Uruguay</option>
+              <option value="UZ">Uzbekistan</option>
+              <option value="VU">Vanuatu</option>
+              <option value="VA">Vatican City Holy See</option>
+              <option value="VE">Venezuela</option>
+              <option value="VN">Vietnam</option>
+              <option value="VG">Virgin Islands, British</option>
+              <option value="VI">Virgin Islands, U.S</option>
+              <option value="WF">Wallis and Futuna</option>
+              <option value="EH">Western Sahara</option>
+              <option value="YE">Yemen</option>
+              <option value="ZM">Zambia</option>
+              <option value="ZW">Zimbabwe</option>
+            </select>
+          </div>
+
+          <!-- Visa Type -->
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">
+              Seleccionar tipo de visa
+            </label>
+            <select id="visaTypeSelect"
+              class="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-500">
+              <option value="">--Select a Visa Type--</option>
+              <optgroup label="Nonimmigrant Visas">
+                <option value="A">Diplomats & Foreign Government Officials</option>
+                <option value="B-1/B-2">Business, Tourism & Medical Treatment</option>
+                <option value="C">Transit Visas</option>
+                <option value="D">Crewmember Visas</option>
+                <option value="E">Treaty Traders & Investors</option>
+                <option value="F">Academic Students</option>
+                <option value="G">International Organizations & NATO Personnel</option>
+                <option value="H">Temporary Workers</option>
+                <option value="I">Foreign Media Representatives</option>
+                <option value="J">Exchange Visitors</option>
+                <option value="K">Fiancé(e)s of U.S. Citizens</option>
+                <option value="L">Intra-company Transferees</option>
+                <option value="M">Vocational Students</option>
+                <option value="O">Individuals with Extraordinary Ability</option>
+                <option value="P">Athletes, Artists & Entertainers</option>
+                <option value="Q">Cultural Exchange</option>
+                <option value="R">Religious Workers</option>
+                <option value="S">Informant (S-1/S-2)</option>
+                <option value="T">Victims of Human Trafficking</option>
+                <option value="U">Victims of Criminal Activity</option>
+              </optgroup>
+              <optgroup label="Immigrant Visas">
+                <option value="Family-Based">Family-Based Visas (e.g., Immediate Relatives, Family-Sponsored)</option>
+                <option value="Employment-Based">Employment-Based Visas (e.g., EB-1, EB-2, EB-3, EB-4, EB-5)</option>
+                <option value="Diversity-Visa">Diversity Immigrant Visa Program</option>
+                <option value="Special-Immigrant">Special Immigrant Visas (e.g., Iraqi & Afghan Translators)</option>
+                <option value="Returning-Resident">Returning Resident Visas</option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="step2"
+      class="w-full h-full  mt-8 bg-white rounded-2xl shadow-md overflow-auto grid grid-cols-1 md:xl:grid-cols-[600px_1fr] hidden">
+      <!-- Left Image -->
+      <div class="bg-[#D9ECFB] flex flex-col h-full p-6 items-center">
+        <div class="max-w-[501px]">
+          <img src="images/step-2-img.png" alt="Visa Flags" class="w-full h-full object-cover" />
+        </div>
+        <!-- Video Placeholder -->
+        <!-- <div class="h-[220px] bg-gray-300 rounded-xl flex items-center justify-center mb-6 relative">
+            <span class="text-gray-600">Video Aquí</span>
+            <div class="absolute bottom-2 right-2 flex gap-2">
+              <button class="text-white bg-black bg-opacity-50 p-1 rounded-full">⏸</button>
+              <button class="text-white bg-black bg-opacity-50 p-1 rounded-full">🔊</button>
+              <button class="text-white bg-black bg-opacity-50 p-1 rounded-full">⛶</button>
+            </div>
+            </div> -->
+        <!-- Recommendations -->
+        <div class=" text-sm max-w-[501px] pt-12">
+          <h2 class="text-[32px] font-semibold pb-10 text-left ">Recomendaciones</h2>
+          <div class="mt-0  pt-6 pb-4 border-t border-[#97BBE1]">
+            <p class=" mb-1 text-lg  font-semibold"><span class="font-bold text-[22px]">01</span> Pasaporte vigente</p>
+            <p>Debe tener al menos 6 meses de vigencia después de la fecha prevista de ingreso a EE.UU.</p>
+          </div>
+          <div class="  pt-6 pb-4 border-t border-[#97BBE1]">
+            <p class="font-semibold mb-1 text-lg"><span class="font-bold text-[22px]">02</span> Formulario DS-160
+              completado</p>
+            <p>Confirmación con código de barras.</p>
+          </div>
+          <div class="  pt-6 pb-4  border-t border-[#97BBE1]">
+            <p class="font-semibold mb-1 text-lg"><span class="font-bold text-[22px]">03</span> Foto reciente</p>
+            <p>Formato 5x5 cm (2x2 pulgadas), fondo blanco, sin gafas, tomada en los últimos 6 meses.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Right Section Fluid -->
+      <div class="p-10 flex flex-col ">
+        <p class="text-gray-500 text-sm md:text-[16px] mb-2">Paso 02</p>
+        <h1 class="text-2xl md:text-[32px] font-semibold text-gray-900 mb-4">Formulario y documentos</h1>
+        <p class="text-black-600 mb-6 md:text-[22px]">Adjunta los documentos requeridos para respaldar tu solicitud.</p>
+        <!-- Upload Grid -->
+        <div id="uploadGrid" class="grid grid-cols-1 xl:grid-cols-2 gap-6 xl:max-w-[756px]">
+          <div class="space-y-2">
+            <!-- Label Above -->
+            <label class="text-sm font-medium text-gray-700 pb-3 block">Formulario DS-160</label>
+            <!-- Upload Box -->
+            <div
+              class="upload-component hover:border-indigo-500 transition w-auto 2xl:w-[328px] h-[133px] bg-white border-2 border-dashed border-gray-300 rounded-lg p-4 relative flex flex-col justify-center items-center">
+              <!-- Initial State -->
+              <div class="initial-state flex flex-col items-center justify-center text-center space-y-1">
+                <div class="text-gray-400 text-3xl"><img src="images/file-upload-icon.png" alt="Upload"
+                    class="w-[44px] h-[44px]">
+                </div>
+                <p class="text-[15px]">
+                  <span class="text-[#03139D] font-medium">Haga clic para cargar</span>
+                  <span class="text-gray-600"> o arrastre y suelte</span>
+                </p>
+                <!-- <p class="text-sm text-gray-600"><a href="kavascript:void(0)" class="text-[#03139D]">Haga clic para cargar</a> o
+                    arrastre y suelte</p> -->
+                <p class="text-gray-400 text-xs">(Max. File size: 25 MB)</p>
+                <input type="file" class="file-input absolute inset-0 opacity-0 cursor-pointer" name="ds160Form" />
+              </div>
+              <!-- Uploaded State -->
+              <div class="uploaded-state hidden w-full h-full flex flex-col justify-center">
+                <div class="flex items-center justify-between space-x-2">
+                  <div class="flex items-center space-x-2">
+                    <div class="text-2xl text-gray-500"><img src="images/document-text.png" alt="Upload"
+                        class="w-[20px] h-[20px]"></div>
+                    <p class="file-name text-sm text-gray-800 truncate max-w-[160px]"></p>
+                  </div>
+                  <button type="button" class="delete-btn text-red-500 text-lg font-bold"><img src="images/trash.png"
+                      alt="Upload" class="w-[20px] h-[20px]"></button>
+                </div>
+                <p class="file-size text-xs text-gray-500 mt-1"></p>
+                <a class="file-link text-sm text-[#03139D] font-bold  underline mt-1 no-underline" target="_blank">Click
+                  para ver</a>
+              </div>
+            </div>
+          </div>
+          <div class="space-y-2">
+            <!-- Label Above -->
+            <label class="text-sm font-medium text-gray-700 pb-3 block">Pago de la tasa de visa</label>
+            <!-- Upload Box -->
+            <div
+              class="upload-component hover:border-indigo-500 transition w-auto 2xl:w-[328px] h-[133px] bg-white border-2 border-dashed border-gray-300 rounded-lg p-4 relative flex flex-col justify-center items-center">
+              <!-- Initial State -->
+              <div class="initial-state flex flex-col items-center justify-center text-center space-y-1">
+                <div class="text-gray-400 text-3xl">
+                  <img src="images/file-upload-icon.png" alt="Upload" class="w-[44px] h-[44px]">
+                </div>
+                <p class="text-[15px]">
+                  <span class="text-[#03139D] font-medium">Haga clic para cargar</span>
+                  <span class="text-gray-600"> o arrastre y suelte</span>
+                </p>
+                <!-- <p class="text-sm text-gray-600"><a href="kavascript:void(0)" class="text-[#03139D]">Haga clic para cargar</a> o
+                    arrastre y suelte</p> -->
+                <p class="text-gray-400 text-xs">(Max. File size: 25 MB)</p>
+                <input type="file" class="file-input absolute inset-0 opacity-0 cursor-pointer" name="visaFeeReceipt" />
+              </div>
+              <!-- Uploaded State -->
+              <div class="uploaded-state hidden w-full h-full flex flex-col justify-center">
+                <div class="flex items-center justify-between space-x-2">
+                  <div class="flex items-center space-x-2">
+                    <div class="text-2xl text-gray-500"><img src="images/document-text.png" alt="Upload"
+                        class="w-[20px] h-[20px]"></div>
+                    <p class="file-name text-sm text-gray-800 truncate max-w-[160px]"></p>
+                  </div>
+                  <button type="button" class="delete-btn text-red-500 text-lg font-bold"><img src="images/trash.png"
+                      alt="Upload" class="w-[20px] h-[20px]"></button>
+                </div>
+                <p class="file-size text-xs text-gray-500 mt-1"></p>
+                <a class="file-link text-sm text-[#03139D] font-bold  underline mt-1 no-underline" target="_blank">Click
+                  para
+                  ver</a>
+              </div>
+            </div>
+          </div>
+          <div class="space-y-2">
+            <!-- Label Above -->
+            <label class="text-sm font-medium text-gray-700 pb-3 block">Pasaporte Vigente</label>
+            <!-- Upload Box -->
+            <div
+              class="upload-component hover:border-indigo-500 transition w-auto 2xl:w-[328px] h-[133px] bg-white border-2 border-dashed border-gray-300 rounded-lg p-4 relative flex flex-col justify-center items-center">
+              <!-- Initial State -->
+              <div class="initial-state flex flex-col items-center justify-center text-center space-y-1">
+                <div class="text-gray-400 text-3xl"><img src="images/file-upload-icon.png" alt="Upload"
+                    class="w-[44px] h-[44px]">
+                </div>
+                <p class="text-[15px]">
+                  <span class="text-[#03139D] font-medium">Haga clic para cargar</span>
+                  <span class="text-gray-600"> o arrastre y suelte</span>
+                </p>
+                <!-- <p class="text-sm text-gray-600"><a href="kavascript:void(0)" class="text-[#03139D]">Haga clic para cargar</a> o
+                    arrastre y suelte</p> -->
+                <p class="text-gray-400 text-xs">(Max. File size: 25 MB)</p>
+                <input type="file" class="file-input absolute inset-0 opacity-0 cursor-pointer" name="passport" />
+              </div>
+              <!-- Uploaded State -->
+              <div class="uploaded-state hidden w-full h-full flex flex-col justify-center">
+                <div class="flex items-center justify-between space-x-2">
+                  <div class="flex items-center space-x-2">
+                    <div class="text-2xl text-gray-500"><img src="images/document-text.png" alt="Upload"
+                        class="w-[20px] h-[20px]"></div>
+                    <p class="file-name text-sm text-gray-800 truncate max-w-[160px]"></p>
+                  </div>
+                  <button type="button" class="delete-btn text-red-500 text-lg font-bold"><img src="images/trash.png"
+                      alt="Upload" class="w-[20px] h-[20px]"></button>
+                </div>
+                <p class="file-size text-xs text-gray-500 mt-1"></p>
+                <a class="file-link text-sm text-[#03139D] font-bold  underline mt-1 no-underline" target="_blank">Click
+                  para
+                  ver</a>
+              </div>
+            </div>
+          </div>
+          <div class="space-y-2">
+            <!-- Label Above -->
+            <label class="text-sm font-medium text-gray-700 pb-3 block">Foto Reciente</label>
+            <!-- Upload Box -->
+            <div
+              class="upload-component hover:border-indigo-500 transition w-auto 2xl:w-[328px] h-[133px] bg-white border-2 border-dashed border-gray-300 rounded-lg p-4 relative flex flex-col justify-center items-center">
+              <!-- Initial State -->
+              <div class="initial-state flex flex-col items-center justify-center text-center space-y-1">
+                <div class="text-gray-400 text-3xl"><img src="images/file-upload-icon.png" alt="Upload"
+                    class="w-[44px] h-[44px]">
+                </div>
+                <p class="text-[15px]">
+                  <span class="text-[#03139D] font-medium">Haga clic para cargar</span>
+                  <span class="text-gray-600"> o arrastre y suelte</span>
+                </p>
+                <!-- <p class="text-sm text-gray-600"><a href="kavascript:void(0)" class="text-[#03139D]">Haga clic para cargar</a> o
+                    arrastre y suelte</p> -->
+                <p class="text-gray-400 text-xs">(Max. File size: 25 MB)</p>
+                <input type="file" class="file-input absolute inset-0 opacity-0 cursor-pointer" name="recentPhoto" />
+              </div>
+              <!-- Uploaded State -->
+              <div class="uploaded-state hidden w-full h-full flex flex-col justify-center">
+                <div class="flex items-center justify-between space-x-2">
+                  <div class="flex items-center space-x-2">
+                    <div class="text-2xl text-gray-500"><img src="images/document-text.png" alt="Upload"
+                        class="w-[20px] h-[20px]"></div>
+                    <p class="file-name text-sm text-gray-800 truncate max-w-[160px]"></p>
+                  </div>
+                  <button type="button" class="delete-btn text-red-500 text-lg font-bold"><img src="images/trash.png"
+                      alt="Upload" class="w-[20px] h-[20px]"></button>
+                </div>
+                <p class="file-size text-xs text-gray-500 mt-1"></p>
+                <a class="file-link text-sm text-[#03139D] font-bold  underline mt-1 no-underline" target="_blank">Click
+                  para
+                  ver</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="nextStep" class="hidden  grid grid-cols-1 xl:grid-cols-2 gap-6 xl:max-w-[756px]">
+          <div class="space-y-2">
+            <!-- Label Above -->
+            <label class="text-sm font-medium text-gray-700 pb-3 block">Itinerario de viaje</label>
+            <!-- Upload Box -->
+            <div
+              class="upload-component hover:border-indigo-500 transition w-auto 2xl:w-[328px] h-[133px] bg-white border-2 border-dashed border-gray-300 rounded-lg p-4 relative flex flex-col justify-center items-center">
+              <!-- Initial State -->
+              <div class="initial-state flex flex-col items-center justify-center text-center space-y-1">
+                <div class="text-gray-400 text-3xl"><img src="images/file-upload-icon.png" alt="Upload"
+                    class="w-[44px] h-[44px]">
+                </div>
+                <p class="text-[15px]">
+                  <span class="text-[#03139D] font-medium">Haga clic para cargar</span>
+                  <span class="text-gray-600"> o arrastre y suelte</span>
+                </p>
+                <!-- <p class="text-sm text-gray-600"><a href="kavascript:void(0)" class="text-[#03139D]">Haga clic para cargar</a> o
+                    arrastre y suelte</p> -->
+                <p class="text-gray-400 text-xs">(Max. File size: 25 MB)</p>
+                <input type="file" name="travelItinerary"
+                  class="file-input absolute inset-0 opacity-0 cursor-pointer" />
+              </div>
+              <!-- Uploaded State -->
+              <div class="uploaded-state hidden w-full h-full flex flex-col justify-center">
+                <div class="flex items-center justify-between space-x-2">
+                  <div class="flex items-center space-x-2">
+                    <div class="text-2xl text-gray-500"><img src="images/document-text.png" alt="Upload"
+                        class="w-[20px] h-[20px]"></div>
+                    <p class="file-name text-sm text-gray-800 truncate max-w-[160px]"></p>
+                  </div>
+                  <button type="button" class="delete-btn text-red-500 text-lg font-bold"><img src="images/trash.png"
+                      alt="Upload" class="w-[20px] h-[20px]"></button>
+                </div>
+                <p class="file-size text-xs text-gray-500 mt-1"></p>
+                <a class="file-link text-sm text-[#03139D] font-bold  underline mt-1 no-underline" target="_blank">Click
+                  para
+                  ver</a>
+              </div>
+            </div>
+          </div>
+          <div class="space-y-2">
+            <!-- Label Above -->
+            <label class="text-sm font-medium text-gray-700 pb-3 block">Carta de empleador (si corresponde)</label>
+            <!-- Upload Box -->
+            <div
+              class="upload-component hover:border-indigo-500 transition w-auto 2xl:w-[328px] h-[133px] bg-white border-2 border-dashed border-gray-300 rounded-lg p-4 relative flex flex-col justify-center items-center">
+              <!-- Initial State -->
+              <div class="initial-state flex flex-col items-center justify-center text-center space-y-1">
+                <div class="text-gray-400 text-3xl"><img src="images/file-upload-icon.png" alt="Upload"
+                    class="w-[44px] h-[44px]">
+                </div>
+                <p class="text-[15px]">
+                  <span class="text-[#03139D] font-medium">Haga clic para cargar</span>
+                  <span class="text-gray-600"> o arrastre y suelte</span>
+                </p>
+                <!-- <p class="text-sm text-gray-600"><a href="kavascript:void(0)" class="text-[#03139D]">Haga clic para cargar</a> o
+                    arrastre y suelte</p> -->
+                <p class="text-gray-400 text-xs">(Max. File size: 25 MB)</p>
+                <input type="file" name="employerLetter" class="file-input absolute inset-0 opacity-0 cursor-pointer" />
+              </div>
+              <!-- Uploaded State -->
+              <div class="uploaded-state hidden w-full h-full flex flex-col justify-center">
+                <div class="flex items-center justify-between space-x-2">
+                  <div class="flex items-center space-x-2">
+                    <div class="text-2xl text-gray-500"><img src="images/document-text.png" alt="Upload"
+                        class="w-[20px] h-[20px]"></div>
+                    <p class="file-name text-sm text-gray-800 truncate max-w-[160px]"></p>
+                  </div>
+                  <button type="button" class="delete-btn text-red-500 text-lg font-bold"><img src="images/trash.png"
+                      alt="Upload" class="w-[20px] h-[20px]"></button>
+                </div>
+                <p class="file-size text-xs text-gray-500 mt-1"></p>
+                <a class="file-link text-sm text-[#03139D] font-bold  underline mt-1 no-underline" target="_blank">Click
+                  para
+                  ver</a>
+              </div>
+            </div>
+          </div>
+          <div class="space-y-2">
+            <!-- Label Above -->
+            <label class="text-sm font-medium text-gray-700 pb-3 block">Prueba de alojamiento</label>
+            <!-- Upload Box -->
+            <div
+              class="upload-component hover:border-indigo-500 transition w-auto 2xl:w-[328px] h-[133px] bg-white border-2 border-dashed border-gray-300 rounded-lg p-4 relative flex flex-col justify-center items-center">
+              <!-- Initial State -->
+              <div class="initial-state flex flex-col items-center justify-center text-center space-y-1">
+                <div class="text-gray-400 text-3xl"><img src="images/file-upload-icon.png" alt="Upload"
+                    class="w-[44px] h-[44px]">
+                </div>
+                <p class="text-[15px]">
+                  <span class="text-[#03139D] font-medium">Haga clic para cargar</span>
+                  <span class="text-gray-600"> o arrastre y suelte</span>
+                </p>
+                <!-- <p class="text-sm text-gray-600"><a href="kavascript:void(0)" class="text-[#03139D]">Haga clic para cargar</a> o
+                    arrastre y suelte</p> -->
+                <p class="text-gray-400 text-xs">(Max. File size: 25 MB)</p>
+                <input type="file" name="proofOfAccommodation"
+                  class="file-input absolute inset-0 opacity-0 cursor-pointer" />
+              </div>
+              <!-- Uploaded State -->
+              <div class="uploaded-state hidden w-full h-full flex flex-col justify-center">
+                <div class="flex items-center justify-between space-x-2">
+                  <div class="flex items-center space-x-2">
+                    <div class="text-2xl text-gray-500"><img src="images/document-text.png" alt="Upload"
+                        class="w-[20px] h-[20px]"></div>
+                    <p class="file-name text-sm text-gray-800 truncate max-w-[160px]"></p>
+                  </div>
+                  <button type="button" class="delete-btn text-red-500 text-lg font-bold"><img src="images/trash.png"
+                      alt="Upload" class="w-[20px] h-[20px]"></button>
+                </div>
+                <p class="file-size text-xs text-gray-500 mt-1"></p>
+                <a class="file-link text-sm text-[#03139D] font-bold  underline mt-1 no-underline" target="_blank">Click
+                  para
+                  ver</a>
+              </div>
+            </div>
+          </div>
+          <div class="space-y-2">
+            <!-- Label Above -->
+            <label class="text-sm font-medium text-gray-700 pb-3 block">Prueba de medios financieros (extractos
+              bancarios)</label>
+            <!-- Upload Box -->
+            <div
+              class="upload-component hover:border-indigo-500 transition w-auto 2xl:w-[328px] h-[133px] bg-white border-2 border-dashed border-gray-300 rounded-lg p-4 relative flex flex-col justify-center items-center">
+              <!-- Initial State -->
+              <div class="initial-state flex flex-col items-center justify-center text-center space-y-1">
+                <div class="text-gray-400 text-3xl"><img src="images/file-upload-icon.png" alt="Upload"
+                    class="w-[44px] h-[44px]">
+                </div>
+                <p class="text-[15px]">
+                  <span class="text-[#03139D] font-medium">Haga clic para cargar</span>
+                  <span class="text-gray-600"> o arrastre y suelte</span>
+                </p>
+                <!-- <p class="text-sm text-gray-600"><a href="kavascript:void(0)" class="text-[#03139D]">Haga clic para cargar</a> o
+                    arrastre y suelte</p> -->
+                <p class="text-gray-400 text-xs">(Max. File size: 25 MB)</p>
+                <input type="file" name="proofOfFinancialMeans"
+                  class="file-input absolute inset-0 opacity-0 cursor-pointer" />
+              </div>
+              <!-- Uploaded State -->
+              <div class="uploaded-state hidden w-full h-full flex flex-col justify-center">
+                <div class="flex items-center justify-between space-x-2">
+                  <div class="flex items-center space-x-2">
+                    <div class="text-2xl text-gray-500"><img src="images/document-text.png" alt="Upload"
+                        class="w-[20px] h-[20px]"></div>
+                    <p class="file-name text-sm text-gray-800 truncate max-w-[160px]"></p>
+                  </div>
+                  <button type="button" class="delete-btn text-red-500 text-lg font-bold"><img src="images/trash.png"
+                      alt="Upload" class="w-[20px] h-[20px]"></button>
+                </div>
+                <p class="file-size text-xs text-gray-500 mt-1"></p>
+                <a class="file-link text-sm text-[#03139D] font-bold  underline mt-1 no-underline" target="_blank">Click
+                  para
+                  ver</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="step3"
+      class="w-full h-full  mt-8 bg-white rounded-2xl shadow-md overflow-auto grid grid-cols-1 md:xl:grid-cols-[600px_1fr] hidden">
+      <!-- Left Image -->
+      <div class="bg-[#D9ECFB] flex flex-col h-full p-6 items-center">
+        <div class="max-w-[501px]">
+          <img src="images/step-3-img.png" alt="Visa Flags" class="w-full h-full object-cover" />
+        </div>
+        <div class=" text-sm max-w-[501px] w-[100%] pt-12">
+          <h2 class="text-[32px] font-semibold   text-left ">Recomendaciones</h2>
+          <div class="  pt-6 pb-4  ">
+            <p class="font-semibold mb-1 text-lg"> Recuerda incluir esta información en tu video:
+            </p>
+          </div>
+          <div class="mt-0  pt-6 pb-4 border-t border-[#97BBE1]">
+            <p class=" mb-1 text-xs  font-normal">Motivo del viaje (turismo, estudios, trabajo, etc.).</p>
+          </div>
+          <div class="mt-0  pt-6 pb-4 border-t border-[#97BBE1]">
+            <p class=" mb-1 text-xs  font-normal">Duración estimada de la estadía.</p>
+          </div>
+          <div class="mt-0  pt-6 pb-4 border-t border-[#97BBE1]">
+            <p class=" mb-1 text-xs  font-normal">Pruebas de tus vínculos con tu país (trabajo, estudios, familia,
+              etc.).</p>
+          </div>
+          <div class="mt-0  pt-6 pb-4 border-t border-[#97BBE1]">
+            <p class=" mb-1 text-xs  font-normal">Razones por las que regresarás a tu país de origen.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Right Section Fluid -->
+      <div class="p-10 flex flex-col ">
+        <p class="text-gray-500 text-sm md:text-[16px] mb-2">Paso 03</p>
+        <h1 class="text-2xl md:text-[32px] font-semibold text-gray-900 mb-4">Video de intención</h1>
+        <p class="text-black-600 mb-6 md:text-[22px]">Graba un video explicando las razones por las que solicitas esta
+          visa y tus planes en el país de destino.</p>
+        <!-- <div class="space-y-2">
+            <label class="block text-md font-normal text-gray-700">Video de intención</label>
+            
+            
+            <div class="upload-component w-[328px] h-[133px] bg-white border-2 border-dashed border-gray-300 rounded-lg p-4 relative flex flex-col justify-center items-center">
+              
+              <div class="initial-state flex flex-col items-center justify-center text-center space-y-1">
+                <div class="text-gray-400 text-3xl"><img src="images/file-upload-icon.png" alt="Upload" class="w-[44px] h-[44px]"></div>
+                <p class="text-sm text-gray-600"><a href="kavascript:void(0)" class="text-[#03139D]">Haga clic para cargar</a> o
+                  arrastre y suelte</p>
+                  <p class="text-xs text-gray-400 font-bold">(Max. File size: 25 MB)</p>
+                <input type="file" class="file-input absolute inset-0 opacity-0 cursor-pointer" />
+              </div>
+            
+              
+              <div class="uploaded-state hidden w-full h-full flex flex-col justify-center">
+                <div class="flex items-center justify-between space-x-2">
+                  <div class="flex items-center space-x-2">
+                    <div class="text-2xl text-gray-500"><img src="images/document-text.png" alt="Upload" class="w-[20px] h-[20px]"></div>
+                    <p class="file-name text-sm text-gray-800 truncate max-w-[160px]"></p>
+                  </div>
+                  <button class="delete-btn text-red-500 text-lg font-bold"><img src="images/trash.png" alt="Upload" class="w-[20px] h-[20px]"></button>
+                </div>
+                <p class="file-size text-xs text-gray-500 mt-1"></p>
+                <a class="file-link text-sm text-[#03139D] font-bold  underline mt-1 no-underline" target="_blank">Click para
+                  ver</a>
+              </div>
+            </div>
+            </div> -->
+        <div class="block text-md font-normal text-gray-700 mb-3">Video de intención</div>
+        <button id="openModal" type="button"
+          class="w-full sm:w-auto px-4 sm:px-6 py-3 sm:py-4 border border-[#CACACA] rounded-lg flex items-center justify-center gap-3 bg-white text-[#03139D] hover:bg-gray-50 transition">
+
+          <span class="flex-shrink-0">
+            <img src="images/video-blue.png" alt="Video" class="w-8 h-8 sm:w-11 sm:h-11">
+          </span>
+
+          <span class="text-sm sm:text-base md:text-lg font-medium text-center">
+            Haga clic para grabar su video
+          </span>
+        </button>
+
+        <p class="mt-4 text-sm text-red-600 font-medium" id="videoError" style="display: none;">
+          Por favor, grabe y cargue su video de intención para continuar.
+  
+
+</p>
+
+        <div id="modal-video-capture"
+          class="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4 sm:p-6 overflow-auto hidden">
+
+          <!-- Modal Box -->
+          <div
+            class="bg-white w-full sm:w-[90%] max-w-[800px] rounded-2xl shadow-lg border border-gray-200 p-4 sm:p-6 flex flex-col max-h-[90vh]">
+
+            <!-- Main Content -->
+            <div class="w-full flex flex-col gap-4 flex-grow overflow-y-auto">
+
+              <!-- Camera Preview -->
+              <div class="relative w-full flex items-center justify-center">
+                <div
+                  class="bg-black rounded-lg overflow-hidden w-full aspect-video shadow-md border border-gray-300 flex items-center justify-center">
+                  <video id="cameraPreview" class="w-full h-full object-cover" autoplay playsinline muted></video>
+                </div>
+
+                <!-- Recording Status -->
+                <div id="recordingStatus"
+                  class="hidden absolute top-4 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-black/70 text-white px-4 py-2 rounded-full shadow-md text-sm sm:text-base">
+                  <span class="w-3 h-3 bg-red-500 rounded-full animate-pulse"></span>
+                  <span>Recording... <span id="recordingTimer">00:00</span></span>
+                </div>
+              </div>
+
+              <!-- Sound Bar -->
+              <div class="flex items-center justify-center w-full">
+                <img src="images/sound-bar.png" alt="Sound Bar" class="w-2/3 max-w-[289px] h-auto">
+              </div>
+
+              <!-- Dropdowns -->
+              <div class="flex flex-col xl:flex-row gap-4">
+                <!-- Video Source -->
+                <div class="relative w-full">
+                  <select
+                    class="appearance-none w-full border border-gray-300 rounded-xl pl-14 pr-10 py-3 text-sm sm:text-base focus:border-[#03139D] focus:ring focus:ring-[#03139D]/20">
+                    <option>Predeterminado</option>
+                  </select>
+                  <div class="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none">
+                    <img src="images/video-icon-dropdown.png" alt="Video" class="w-8 sm:w-[33px] h-auto">
+                  </div>
+                  <div class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
+                    <img src="images/dropdown-arrow.png" alt="arrow" class="w-5 h-5">
+                  </div>
+                </div>
+
+                <!-- Audio Source -->
+                <div class="relative w-full">
+                  <select
+                    class="appearance-none w-full border border-gray-300 rounded-xl pl-14 pr-10 py-3 text-sm sm:text-base focus:border-[#03139D] focus:ring focus:ring-[#03139D]/20">
+                    <option>Predeterminado</option>
+                  </select>
+                  <div class="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none">
+                    <img src="images/audio-icon-dropdown.png" alt="Audio" class="w-8 sm:w-[33px] h-auto">
+                  </div>
+                  <div class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
+                    <img src="images/dropdown-arrow.png" alt="arrow" class="w-5 h-5">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bottom Buttons -->
+              <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-5 mt-auto">
+                <button type="button"
+                  class="px-5 py-3 border border-[#161B1E] rounded-xl text-sm sm:text-md hover:bg-gray-100 transition-colors w-full sm:w-auto">
+                  Atrás
+                </button>
+                <button type="button"
+                  class="open-recording-preview-modal px-5 py-3 bg-[#03139D] text-white rounded-xl text-sm sm:text-md hover:bg-white hover:text-[#03139D] hover:border hover:border-[#03139D] transition-colors w-full sm:w-auto">
+                  Comenzar a grabar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Video Preview Modal -->
+        <!-- Video Preview Modal -->
+        <div id="modal-recording-preview"
+          class="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4 sm:p-6 overflow-auto hidden">
+
+          <div
+            class="bg-white w-full sm:w-[90%] max-w-[800px] rounded-2xl pt-6 sm:pt-10 p-4 sm:p-6 flex flex-col gap-6 max-h-[90vh] overflow-hidden">
+
+            <!-- Top Bar -->
+            <div class="w-full flex flex-col md:flex-row justify-between items-center shrink-0 gap-4">
+
+              <!-- Timer -->
+              <div class="text-lg sm:text-xl md:text-2xl font-medium text-[#03139D] text-center md:text-left">
+                <span id="recordedVideoTimer">00:00</span> |
+                <span class="text-[#03139D] font-light">Grabando</span>
+              </div>
+
+              <!-- Buttons -->
+              <div class="flex flex-wrap justify-center md:justify-end gap-3">
+                <!-- Eliminar -->
+                <button id="Eliminar"
+                  class="flex items-center gap-2 text-[#161B1E] text-sm sm:text-base hover:underline">
+                  <img src="images/trash.png" alt="delete" class="w-4 h-4 sm:w-5 sm:h-5" />
+                  Eliminar
+                </button>
+
+                <!-- Pausar -->
+                <button id="Pausar"
+                  class="flex items-center gap-2 text-[#161B1E] border border-[#CACACA] rounded-xl bg-white px-3 py-1.5 text-sm sm:text-base">
+                  <img src="images/pause.png" alt="pause" class="w-5 h-5" />
+                  Pausar
+                </button>
+
+                <!-- Finalizar -->
+                <button
+                  class="open-upload-progress-modal flex items-center gap-2 text-white bg-[#03139D] rounded-xl px-3 py-1.5 text-sm sm:text-base hover:bg-blue-800">
+                  <img src="images/running.png" alt="finish" class="w-5 h-auto" />
+                  Finalizar grabación
+                </button>
+              </div>
+            </div>
+
+            <!-- Video Section -->
+            <div class="w-full grow flex items-center justify-center overflow-y-auto">
+              <div
+                class="bg-gradient-to-br from-gray-200 via-white to-gray-200 rounded-lg shadow-lg overflow-hidden border border-gray-300 w-full max-w-[720px] aspect-video flex items-center justify-center">
+                <video id="previewVideo" controls class="w-full h-full object-cover rounded-lg">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- Upload Progress Modal -->
+        <div id="modal-upload-progress" class="fixed inset-0 z-50 bg-black/50 flex items-center justify-center hidden">
+          <div class="bg-white w-[90%] max-w-[1574px] h-[568px] rounded-2xl p-6 flex items-center justify-center">
+            <!-- Inner Container -->
+            <div class="w-full max-w-[910px] flex flex-col items-center text-center space-y-6">
+              <!-- Row 1: Small Title -->
+              <p class="text-[16px] font-light text-[#161B1E]">Video de Intención</p>
+              <!-- Row 2: Main Title -->
+              <h2 class="text-[32px] font-bold text-[#161B1E]">Subiendo tu grabación</h2>
+              <!-- Row 3: Progress Bar -->
+              <div class="w-full bg-[#B3B8E1] h-3 rounded-full overflow-hidden">
+                <div id="upload-progress-bar" class="h-full bg-[#03139D] w-1/2 transition-all duration-500"></div>
+              </div>
+              <p id="upload-progress-text" class="text-[18px] font-medium text-[#161B1E]">0%</p>
+              <!-- Row 4: Helper Text -->
+              <p class="text-[22px] font-normal text-[#161B1E]">
+                Mantén esta ventana del navegador abierta mientras se sube la grabación.<br />
+                Esto puede tardar unos minutos.
+              </p>
+              <!-- Row 5: Cancel Button -->
+              <button
+                class="open-modal-upload-final w-[185px] h-[50px] border border-[#03139D] bg-white text-[#03139D] rounded-xl text-sm font-medium  ">
+                Cancelar y eliminar
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Upload final Modal -->
+        <div id="modal-upload-final" class="fixed inset-0 z-50 bg-black/50 flex items-center justify-center hidden">
+          <div class="bg-white w-[90%] max-w-[1574px] h-[568px] rounded-2xl p-6 flex items-center justify-center">
+            <!-- Inner Container -->
+            <div class="w-full max-w-[910px] flex flex-col items-center text-center space-y-6">
+              <!-- Row 1: Small Title -->
+              <p class="text-[16px] font-light text-[#161B1E]">Video de Intención</p>
+              <!-- Row 2: Main Title -->
+              <h2 class="text-[32px] font-bold text-[#161B1E]">¡Tu grabación está lista!</h2>
+              <div>
+                <img src="images/success-icon.png" alt="Visa Flags" class="w-[167px] h-[167px]" />
+              </div>
+              <!-- Row 5: Cancel Button -->
+              <button id="saveandexit"
+                class="w-[185px] h-[50px]  bg-[#03139D] text-[#FFF] rounded-xl text-sm font-medium  ">
+                Guardar y salir
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="w-full mt-16 mx-auto p-4">
+          <!-- Title -->
+          <h2 class="text-xl font-semibold mb-4">Recomendaciones para grabar tu video</h2>
+          <!-- Row with borders and padding -->
+          <div class="border-y border-[#D9D9D9] py-6">
+            <div class="flex flex-wrap flex-col xl:flex-row xl:flex-nowrap xl:items-center gap-4">
+              <!-- Column 1 and 2 -->
+              <div class="flex flex-row gap-4 items-center flex-1">
+                <!-- Column 1 -->
+                <div class="text-[22px] font-bold min-w-[40px]">01</div>
+                <!-- Column 2 -->
+                <div class="text-[18px] font-medium">
+                  Habla con claridad y seguridad
+                </div>
+              </div>
+              <!-- Column 3 -->
+              <div class="text-[12px] font-normal flex-1 mt-2 md:mt-0">
+                Explica de manera breve y directa por qué solicitas la visa y cuáles son tus planes en el país de
+                destino.
+              </div>
+            </div>
+          </div>
+          <div class="border-y border-[#D9D9D9] py-6">
+            <div class="flex flex-wrap flex-col xl:flex-row xl:flex-nowrap xl:items-center gap-4">
+              <!-- Column 1 and 2 -->
+              <div class="flex flex-row gap-4 items-center flex-1">
+                <!-- Column 1 -->
+                <div class="text-[22px] font-bold min-w-[40px]">02</div>
+                <!-- Column 2 -->
+                <div class="text-[18px] font-medium">
+                  Cuida tu presentación y el entorno
+                </div>
+              </div>
+              <!-- Column 3 -->
+              <div class="text-[12px] font-normal flex-1 mt-2 md:mt-0">
+                Graba en un lugar tranquilo, con buena iluminación y un fondo neutro que no distraiga. Viste de manera
+                formal o
+                semiformal para transmitir seriedad y confianza.
+              </div>
+            </div>
+          </div>
+          <div class="border-y border-[#D9D9D9] py-6">
+            <div class="flex flex-wrap flex-col xl:flex-row xl:flex-nowrap xl:items-center gap-4">
+              <!-- Column 1 and 2 -->
+              <div class="flex flex-row gap-4 items-center flex-1">
+                <!-- Column 1 -->
+                <div class="text-[22px] font-bold min-w-[40px]">03</div>
+                <!-- Column 2 -->
+                <div class="text-[18px] font-medium">
+                  Duración sugerida
+                </div>
+              </div>
+              <!-- Column 3 -->
+              <div class="text-[12px] font-normal flex-1 mt-2 md:mt-0">
+                Entre 30 segundos a 1 minuto máximo. No hagas videos extensos.
+              </div>
+            </div>
+          </div>
+          <div class="border-y border-[#D9D9D9] py-6">
+            <div class="flex flex-wrap flex-col xl:flex-row xl:flex-nowrap xl:items-center gap-4">
+              <!-- Column 1 and 2 -->
+              <div class="flex flex-row gap-4 items-center flex-1">
+                <!-- Column 1 -->
+                <div class="text-[22px] font-bold min-w-[40px]">04</div>
+                <!-- Column 2 -->
+                <div class="text-[18px] font-medium">
+                  Aspectos a evitar en tu video
+                </div>
+              </div>
+              <!-- Column 3 -->
+              <div class="text-[12px] font-normal flex-1 mt-2 md:mt-0">
+                Evita el uso de gafas oscuras o gorras, así como un lenguaje informal o con bromas. Sé honesto y
+                presenta información
+                verídica y creíble para garantizar la seriedad de tu solicitud.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="step4"
+      class="w-full h-full  mt-8 bg-white rounded-2xl shadow-md overflow-auto grid grid-cols-1 md:xl:grid-cols-[600px_1fr] hidden">
+      <!-- Left Image -->
+      <div class=" h-full">
+        <img src="images/step-4-img.png" alt="Visa Flags" class="w-full h-[calc(100vh-164px)] object-cover" />
+      </div>
+      <!-- Right Section Fluid -->
+      <div class="p-10 flex flex-col xl:overflow-auto">
+        <p class="text-gray-500 text-sm md:text-[16px] mb-2">Paso 04</p>
+        <h1 class="text-2xl md:text-[32px] font-semibold text-gray-900 mb-4">Pago Revisión</h1>
+        <p class="text-black-600 mb-6 md:text-[22px]">Realiza el pago para que un cónsul revise tu solicitud y evalúe
+          los documentos y el video presentados.</p>
+        <div id="payment-section" class="">
+          <!-- Payment Options Container -->
+          <div class=" hidden shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] px-[47px] py-[43px] bg-white rounded-lg">
+            <!-- Label -->
+            <label class="block text-base font-medium text-[#161B1E] mb-6">
+              Selecciona el método de pago:
+            </label>
+            <!-- Radio Button Group -->
+            <div class="grid grid-cols-2 gap-3 xl:flex xl:flex-wrap" role="radiogroup">
+              <!-- Option 1 -->
+              <label
+                class="relative xl:w-[154px] h-[107px] border border-[#CACACA] rounded-lg bg-white p-2 cursor-pointer peer-checked:border-[#03139D] transition duration-200">
+                <input type="radio" name="payment" value="visa" class="sr-only peer" checked />
+                <!-- Blue Square (only visible when selected) -->
+                <div
+                  class="w-4 h-4 absolute top-2 left-2 rounded-sm border border-black bg-transparent peer-checked:bg-[#03139D] transition-all duration-200">
+                </div>
+                <!-- Payment Icon -->
+                <div class="w-full h-full flex items-center justify-center">
+                  <img src="images/nequi.png" alt="nequi" class="w-[107px] object-contain" />
+                </div>
+              </label>
+              <!-- Option 2 -->
+              <label
+                class="relative xl:w-[154px] h-[107px] border border-[#CACACA] rounded-lg bg-white p-2 cursor-pointer peer-checked:border-[#03139D] transition duration-200">
+                <input type="radio" name="payment" value="mastercard" class="sr-only peer" />
+                <div
+                  class="w-4 h-4 absolute top-2 left-2 rounded-sm border border-black bg-transparent peer-checked:bg-[#03139D] transition-all duration-200">
+                </div>
+                <div class="w-full h-full flex items-center justify-center">
+                  <img src="images/pse.png" alt="pse" class="w-[86px] object-contain" />
+                </div>
+              </label>
+              <!-- Option 3 -->
+              <label
+                class="relative xl:w-[154px] h-[107px] border border-[#CACACA] rounded-lg bg-white p-2 cursor-pointer peer-checked:border-[#03139D] transition duration-200">
+                <input type="radio" name="payment" value="amex" class="sr-only peer" />
+                <div
+                  class="w-4 h-4 absolute top-2 left-2 rounded-sm border border-black bg-transparent peer-checked:bg-[#03139D] transition-all duration-200">
+                </div>
+                <div class="w-full h-full flex items-center justify-center">
+                  <img src="images/mercado.png" alt="mercado" class="w-[77px] object-contain" />
+                </div>
+              </label>
+              <!-- Option 4 -->
+              <label
+                class="relative xl:w-[154px] h-[107px] border border-[#CACACA] rounded-lg bg-white p-2 cursor-pointer peer-checked:border-[#03139D] transition duration-200">
+                <input type="radio" name="payment" value="paypal" class="sr-only peer" />
+                <div
+                  class="w-4 h-4 absolute top-2 left-2 rounded-sm border border-black bg-transparent peer-checked:bg-[#03139D] transition-all duration-200">
+                </div>
+                <div class="w-full h-full flex items-center justify-center">
+                  <img src="images/visa.png" alt="visa" class="w-[89px] object-contain" />
+                </div>
+              </label>
+              <!-- Option 5 -->
+              <label
+                class="relative xl:w-[154px] h-[107px] border border-[#CACACA] rounded-lg bg-white p-2 cursor-pointer peer-checked:border-[#03139D] transition duration-200">
+                <input type="radio" name="payment" value="googlepay" class="sr-only peer" />
+                <div
+                  class="w-4 h-4 absolute top-2 left-2 rounded-sm border border-black bg-transparent peer-checked:bg-[#03139D] transition-all duration-200">
+                </div>
+                <div class="w-full h-full flex items-center justify-center">
+                  <img src="images/mastercard.png" alt="mastercard" class="w-[72px] object-contain" />
+                </div>
+              </label>
+            </div>
+          </div>
+          <!-- Payment Summary Box -->
+          <div class="w-full   p-6     space-y-4">
+            <!-- Text 1 -->
+            <p class="text-[18px] leading-[24px] font-normal text-[#161B1E]">
+              Valor Solicitud
+            </p>
+            <!-- Text 2 -->
+            <p class="text-[32px] font-bold text-[#161B1E]">
+              $14.99* USD
+            </p>
+            <!-- Text 3: Description -->
+            <p class="text-[11px] font-normal text-[#161B1E] leading-relaxed">
+              El valor pagado incluye hasta dos intentos de revisión de la solicitud por parte del cónsul virtual. Este
+              pago cubre
+              exclusivamente el proceso de análisis de los datos, documentos y video entregados, pero no garantiza la
+              aprobación
+              de la visa. La decisión final dependerá de la evaluación realizada. El monto es no reembolsable,
+              independientemente
+              del resultado de la solicitud.
+            </p>
+            <!-- Payment Button -->
+            <button id="payBtn" type="button"
+              class="bg-[#03139D] text-white text-md font-medium px-6 py-3 rounded-xl hover:bg-[#021077] transition">
+              Realizar pago
+            </button>
+          </div>
+        </div>
+        <div id="step-4-confirmation-section"
+          class="hidden w-full shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] px-[47px] py-[43px] bg-white rounded-lg space-y-6">
+          <!-- Heading -->
+          <p class="text-[18px] font-semibold text-[#161B1E]">
+            ¡Pago realizado con éxito!
+          </p>
+          <!-- Subtext -->
+          <p class="text-[14px] text-[#161B1E]">
+            Puedes descargar el comprobante o continuar con el proceso.
+          </p>
+          <!-- PDF Box -->
+          <div
+            class="flex flex-col max-w-[154px] items-center gap-3 border border-[#CACACA] rounded-lg p-3 w-fit bg-[#FFF]">
+            <img src="images/pdf.png" alt="PDF" class="w-6.5 h-6.5" />
+            <a href="javascript:void(0)" class="text-sm text-[#161B1E] break-all text-center">Descarga el
+              comprobante</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="step5"
+      class="w-full h-full  mt-8 bg-white rounded-2xl shadow-md overflow-auto grid grid-cols-1 md:xl:grid-cols-[600px_1fr] hidden">
+      <!-- Left Image -->
+      <div class=" h-full">
+        <img src="images/step-5-img.png" alt="Visa Flags" class="w-full h-[100%] object-cover" />
+      </div>
+      <!-- Right Section Fluid -->
+      <div class="p-10 flex flex-col relative">
+        <p class="text-gray-500 text-sm md:text-[16px] mb-2">Paso 05</p>
+        <div id="hide-step-05-in1">
+
+          <div id="result">
+            <h1 class="text-2xl md:text-[32px] font-semibold text-gray-900 mb-4">Revisión Solicitud</h1>
+
+            <!-- Loading -->
+            <div id="loadingsection" class="flex flex-col items-center">
+              <p class="text-black-600 mb-6 md:text-[22px]">
+                Tu información y documentos están siendo evaluados por el cónsul.<br />
+                Te notificaremos el resultado en breve.
+              </p>
+              <div class="flex justify-center items-center 2xl:min-h-[400px]" >
+                <img src="images/loading.gif" alt="Sample" class="w-auto max-w-[216px] h-auto" />
+              </div>
+
+            </div>
+
+            <!-- Final Data -->
+            <div id="finalData" class="hidden text-gray-800 space-y-4">
+              <h2 class="text-xl font-semibold">Información del Solicitante</h2>
+               <h2 class="text-xl font-semibold mt-6">Evaluación</h2>
+              <p><b>Decisión:</b> <span id="decision"></span></p>
+              <p><b>Probabilidad:</b> <span id="probability"></span>%</p>
+            </div>
+          </div>
+
+
+
+          <div class="w-full max-w-full mx-auto p-6 space-y-6">
+
+
+            <!-- CTA Row -->
+            <div class="flex xl:flex-wrap gap-y-4 gap-x-0 justify-start xl:justify-end md:gap-[33px]">
+              <!-- CTA 1 -->
+              <button id="btn-approved"
+                class=" hidden w-[50%] xl:w-[135px] h-[50px] text-[14px] bg-[#FFFFFF] text-[#161B1E] border border-[#161B1E] rounded-lg">
+                Versión Aprobada
+              </button>
+
+              <!-- CTA 2: Denied -->
+              <button id="btn-denied"
+                class="hidden w-[50%] xl:w-[135px] h-[50px] text-[14px] bg-[#FFFFFF] text-[#161B1E] border border-[#161B1E] rounded-lg">
+                Versión Denegada </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="step-5-success-result">
+          <h1 class="text-2xl md:text-[32px] font-semibold text-gray-900 mb-4">Resultado solicitud</h1>
+          <p class="text-black-600 mb-6 md:text-[22px]">Evaluaremos tu solicitud para verificar si cumples con los
+            requisitos establecidos, junto con los motivos y
+            observaciones del cónsul.</p>
+
+          <!-- Outer Container -->
+          <div
+            class="w-full shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] px-[47px] py-[43px] bg-white rounded-lg space-y-6">
+
+            <!-- Inner Centered Container -->
+            <div class="xl:max-w-[598px] mx-auto text-center space-y-4">
+
+              <!-- Row 1: Centered Icon -->
+              <div class="flex justify-center">
+                <img src="images/success-icon.png" alt="Success Icon" class="w-[104px] h-[104px]" />
+              </div>
+
+              <!-- Row 2: Heading Text -->
+              <p class="text-[24px] font-semibold text-black">
+                ¡Buen trabajo! Cumples con los requisitos básicos.
+              </p>
+
+              <!-- Row 3: Body Text -->
+              <p class="text-[18px] text-black">
+                Según la revisión realizada, tu solicitud cumple con los requisitos generales esperados para este tipo
+                de visa.
+                Recuerda que esta es una simulación y la decisión final depende de la autoridad consular oficial.
+              </p>
+
+            </div>
+
+          </div>
+
+          <p class="text-[14px] text-black mt-6">
+            *Recuerda que este es un proceso de simulación y no representa una decisión oficial de ninguna autoridad
+            consular.
+          </p>
+
+          <!-- Row with Two Buttons -->
+          <div class="flex justify-start gap-6 mt-14">
+            <!-- Button 1: Consultar la observación -->
+            <button id="btn-success-panel"
+              class=" w-auto 2xl:w-[290px] h-[50px] flex items-center justify-center px-4 rounded-[10px] text-[16px] font-normal bg-[#03139D] text-white hover:bg-[#021077] transition">
+
+              <span>Consultar la observación</span>
+
+            </button>
+            <button data-step="2"  id="StartApp"
+              class="w-auto 2xl:w-[290px] h-[50px] flex items-center justify-center px-4 rounded-[10px] text-[16px] font-normal bg-white border border-[#CACACA] text-[#161B1E] hover:bg-gray-100 transition">
+              <span>Iniciar nueva solicitud</span>
+
+            </button>
+
+
+
+          </div>
+        </div>
+
+        <div id="step-5-failed-result">
+          <h1 class="text-2xl md:text-[32px] font-semibold text-gray-900 mb-4">Resultado solicitud</h1>
+          <p class="text-black-600 mb-6 md:text-[22px]">Evaluaremos tu solicitud para verificar si cumples con los
+            requisitos establecidos, junto con los motivos y
+            observaciones del cónsul.</p>
+
+          <!-- Outer Container -->
+          <div
+            class="w-full shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] px-[47px] py-[43px] bg-white rounded-lg space-y-6">
+
+            <!-- Inner Centered Container -->
+            <div class="xl:max-w-[598px] mx-auto text-center space-y-4">
+
+              <!-- Row 1: Centered Icon -->
+              <div class="flex justify-center">
+                <img src="images/denied-icon.png" alt="Success Icon" class="w-[104px] h-[104px]" />
+              </div>
+
+              <!-- Row 2: Heading Text -->
+              <p class="text-[24px] font-semibold text-black">
+                Tu solicitud presenta observaciones importantes.
+              </p>
+
+              <!-- Row 3: Body Text -->
+              <p class="text-[18px] text-black">
+                Hemos detectado que tu solicitud no cumple con algunos de los requisitos generales esperados para este
+                tipo de visa. Te
+                recomendamos revisar las observaciones del cónsul virtual para mejorar tu aplicación antes de presentar
+                una solicitud
+                real.
+              </p>
+
+            </div>
+
+          </div>
+
+          <p class="text-[14px] text-black mt-6">
+            *Recuerda que este es un proceso de simulación y no representa una decisión oficial de ninguna autoridad
+            consular.
+          </p>
+
+          <!-- Row with Two Buttons -->
+          <div class="flex justify-start gap-6 mt-14">
+            <!-- Button 1: Consultar la observación -->
+            <button id="btn-denied-panel"
+              class="w-auto 2xl:w-[290px] h-[50px] flex items-center justify-center px-4 rounded-[10px] text-[16px] font-normal bg-[#03139D] text-white hover:bg-[#021077] transition">
+
+              <span>Consultar la observación</span>
+
+            </button>
+            <button   id="StartAppEnd"
+              class="w-auto 2xl:w-[290px] h-[50px] flex items-center justify-center px-4 rounded-[10px] text-[16px] font-normal bg-white border border-[#CACACA] text-[#161B1E] hover:bg-gray-100 transition">
+              <span>Iniciar nueva solicitud</span>
+
+            </button>
+
+
+
+          </div>
+
+        </div>
+
+
+
+
+        <div id="step-5-success-panel"
+          class="w-auto 2xl:w-[622px] h-full fixed top-0 left-0 bg-[#E7F3FF] shadow-[4px_4px_20px_0px_rgba(0,0,0,0.1)] rounded-tr-[30px] rounded-br-[30px] pt-[73px] pr-[20px] pb-[10px] pl-[34px] absolute hidden ml-5">
+
+          <!-- Close Button (fixed, not scrollable) -->
+          <button id="close-step-5-success-panel"
+            class="absolute top-6 right-6 text-gray-600 hover:text-black text-xl z-10">
+            <img src="images/panel-close.png" alt="Close" class="max-w-[27px] h-auto" />
+          </button>
+
+          <!-- Scrollable Content -->
+          <div class="overflow-y-auto max-h-full pr-12 space-y-8 mt-4 pt-10 h-[calc(100%-50px)] custom-scroll">
+
+            <!-- Row 1 -->
+            <div class="border-b border-[#97BBE1] pb-4 space-y-2">
+              <p class="text-[16px] text-[#161B1E] font-normal">Razón 01</p>
+              <p class="text-[22px] text-[#161B1E] font-semibold">Formulario bien diligenciado</p>
+              <p class="text-[18px] text-[#161B1E] font-normal">
+                Los datos ingresados en el formulario son coherentes y completos. Te recomendamos revisar nuevamente
+                antes de la
+                aplicación oficial para evitar errores menores.
+              </p>
+            </div>
+
+            <div class="border-b border-[#97BBE1] pb-4 space-y-2">
+              <p class="text-[16px] text-[#161B1E] font-normal">
+                Razón 02
+              </p>
+              <p class="text-[22px] text-[#161B1E] font-semibold">
+                Requisitos generales cumplidos
+              </p>
+              <p class="text-[18px] text-[#161B1E] font-normal">
+                Según esta simulación, cumples con los requisitos esperados para este tipo de visa. Recuerda que la
+                decisión
+                definitiva
+                depende de la autoridad consular.
+              </p>
+            </div>
+
+            <div class="border-b border-[#97BBE1] pb-4 space-y-2">
+              <p class="text-[16px] text-[#161B1E] font-normal">
+                Razón 03
+              </p>
+              <p class="text-[22px] text-[#161B1E] font-semibold">
+                Documentación Completa
+              </p>
+              <p class="text-[18px] text-[#161B1E] font-normal">
+                La documentación que has presentado cumple con los requisitos básicos. Asegúrate de que todos los
+                archivos estén
+                vigentes y en buen estado al momento de presentar la solicitud real.
+              </p>
+            </div>
+            <div class="border-b border-[#97BBE1] pb-4 space-y-2">
+              <p class="text-[16px] text-[#161B1E] font-normal">
+                Razón 04
+              </p>
+              <p class="text-[22px] text-[#161B1E] font-semibold">
+                Intención de viaje clara
+              </p>
+              <p class="text-[18px] text-[#161B1E] font-normal">
+                Tu video comunica de manera adecuada el propósito de tu viaje. Mantén este mismo nivel de claridad y
+                seguridad al
+              </p>
+            </div>
+            <div class="border-b border-[#97BBE1] pb-4 space-y-2">
+              <p class="text-[16px] text-[#161B1E] font-normal">
+                Razón 04
+              </p>
+              <p class="text-[22px] text-[#161B1E] font-semibold">
+                Intención de viaje clara
+              </p>
+              <p class="text-[18px] text-[#161B1E] font-normal">
+                Tu video comunica de manera adecuada el propósito de tu viaje. Mantén este mismo nivel de claridad y
+                seguridad al
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <div id="step-5-denied-panel"
+          class="w-auto 2xl:w-[622px] h-full fixed top-0 left-0 bg-[#E7F3FF] shadow-[4px_4px_20px_0px_rgba(0,0,0,0.1)] rounded-tr-[30px] rounded-br-[30px] pt-[73px] pr-[20px] pb-[10px] pl-[34px] absolute hidden ml-5">
+
+          <!-- Close Button (fixed, not scrollable) -->
+          <button id="close-step-5-denied-panel"
+            class="absolute top-6 right-6 text-gray-600 hover:text-black text-xl z-10">
+            <img src="images/panel-close.png" alt="Close" class="max-w-[27px] h-auto" />
+          </button>
+
+          <!-- Scrollable Content -->
+          <div class="overflow-y-auto max-h-full pr-12 space-y-8 mt-4 pt-10 h-[calc(100%-50px)] custom-scroll">
+
+            <!-- Row 1 -->
+            <div class="border-b border-[#97BBE1] pb-4 space-y-2">
+              <p class="text-[16px] text-[#161B1E] font-normal">Razón 01</p>
+              <p class="text-[22px] text-[#161B1E] font-semibold">Falta de evidencia financiera suficiente</p>
+              <p class="text-[18px] text-[#161B1E] font-normal">
+                No se demostró que el solicitante cuenta con los recursos económicos necesarios para cubrir su estadía.
+              </p>
+            </div>
+
+            <div class="border-b border-[#97BBE1] pb-4 space-y-2">
+              <p class="text-[16px] text-[#161B1E] font-normal">
+                Razón 02
+              </p>
+              <p class="text-[22px] text-[#161B1E] font-semibold">
+                Falta de claridad en el propósito del viaje
+              </p>
+              <p class="text-[18px] text-[#161B1E] font-normal">
+                La justificación del viaje no fue clara, creíble o alineada con los documentos presentados.
+              </p>
+            </div>
+
+            <div class="border-b border-[#97BBE1] pb-4 space-y-2">
+              <p class="text-[16px] text-[#161B1E] font-normal">
+                Razón 03
+              </p>
+              <p class="text-[22px] text-[#161B1E] font-semibold">
+                Documentación desactualizada.
+              </p>
+              <p class="text-[18px] text-[#161B1E] font-normal">
+                Los documentos cargados como las certificaciones no están vigentes.
+              </p>
+            </div>
+            <div class="border-b border-[#97BBE1] pb-4 space-y-2">
+              <p class="text-[16px] text-[#161B1E] font-normal">
+                Razón 04
+              </p>
+              <p class="text-[22px] text-[#161B1E] font-semibold">
+                Falta de evidencia de vínculos con el país de origen.
+              </p>
+              <p class="text-[18px] text-[#161B1E] font-normal">
+                No se demostraron razones suficientes que indiquen que regresarás a tu país (como empleo, familia,
+                estudios,
+                propiedades, etc.).
+              </p>
+            </div>
+            <div class="border-b border-[#97BBE1] pb-4 space-y-2">
+              <p class="text-[16px] text-[#161B1E] font-normal">
+                Razón 04
+              </p>
+              <p class="text-[22px] text-[#161B1E] font-semibold">
+                Falta de evidencia de vínculos con el país de origen.
+              </p>
+              <p class="text-[18px] text-[#161B1E] font-normal">
+                No se demostraron razones suficientes que indiquen que regresarás a tu país (como empleo, familia,
+                estudios,
+                propiedades, etc.).
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+
+
+      </div>
+    </div>
+  </main>
+
+
+
+
+
+  <!-- Overlay -->
+  <!-- <div id="importantModal" style="display:none" class="fixed inset-0 bg-white bg-opacity-60  flex items-center justify-center z-50 ">
+    <div
+      class="bg-white rounded-3xl max-w-[1105px] w-full mx-4 px-8 py-7 text-center   relative shadow-[4.98px_4.98px_25px_0px_#03139D40]">
+      <button id="closeModalBtn"
+        class="absolute top-5 right-5 text-gray-500 hover:text-black w-[45px] h-[45px] p-[10px] rounded-[22.5px] shadow-[0_4px_25px_0_#03139D40]">✕</button>
+      <img src="images/intro-dialog-character.png" alt="Character" class="w-[255px] h-[265px] mx-auto mb-4" />
+      <div style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.37), rgba(255, 255, 255, 0.37)); backdrop-filter: blur(85.0199966430664px)
+          "> -->
+  <!-- Step 1 -->
+  <!-- <div id="step1Content" class="">
+          <h2 class="text-lg md:text-[32px] font-bold text-[#03139D] mb-4">Aviso importante</h2>
+          <div class="max-w-[600px] mx-auto">
+            <p class="text-black-700 text-[22px] leading-normal mb-6">
+              Esta plataforma es una simulación orientativa, <strong>NO</strong> un proceso oficial de solicitud de
+              visa.
+              Su propósito es ayudarte a mejorar la preparación y presentación de tu solicitud real.
+            </p>
+          </div>
+        </div> -->
+  <!-- Step 2 -->
+  <!-- <div id="step2Content" class="hidden">
+          <h2 class="text-lg md:text-[32px] font-bold text-[#03139D] mb-4">A continuación...</h2>
+          <div class="max-w-[600px] mx-auto">
+            <p class="text-black-700 text-[22px] leading-normal mb-6">
+              Seguirás 5 pasos donde evaluaremos tu información con
+              base en parámetros históricos de recomendaciones consulares. Al finalizar, recibirás una evaluación basada
+              en dichos
+              parámetros.
+            </p>
+          </div>
+        </div> -->
+  <!-- Step 3 -->
+  <!-- <div id="step3Content" class="hidden">
+          <h2 class="text-lg md:text-[32px] font-bold text-[#03139D] mb-4">Recuerda</h2>
+          <div class="max-w-[600px] mx-auto">
+            <p class="text-black-700 text-[22px] leading-normal mb-6">
+              Este ejercicio no garantiza la aprobación de una visani reemplaza la decisión de ninguna autoridad
+              consular
+              oficial.
+            </p>
+            <div class="flex items-center justify-center space-x-2">
+              <input type="checkbox" id="docsCheck" class="w-5 h-5">
+              <label for="docsCheck" class="text-gray-700 text-sm">Entiendo el propósito de esta consulta</label>
+            </div>
+          </div>
+        </div> -->
+  <!-- Progress & Next Button -->
+  <!-- Progress + Next -->
+  <!-- <div id="progressSection" class="flex items-center justify-center space-x-4 mt-6">
+          <div class="flex items-center space-x-1">
+            <div id="bar1" class="w-[46px] h-[3px] bg-[#03139D] rounded-full"></div>
+            <div id="bar2" class="w-[46px] h-[3px] bg-gray-300 rounded-full"></div>
+            <div id="bar3" class="w-[46px] h-[3px] bg-gray-300 rounded-full"></div>
+          </div>
+          <button id="nextStepBtn"
+            class="w-16 h-12 rounded-2xl bg-[#F5F5F5] text-[#03139D] flex items-center justify-center hover:bg-white-900">
+            <img src="images/arrow-blue.png" />
+          </button>
+        </div> -->
+  <!-- Submit Button (Hidden initially) -->
+  <!-- <div id="submitSection" class="mt-6 hidden">
+          <button id="" class="bg-[#03139D] text-white px-6 py-3 rounded-xl hover:bg-blue-900">Comenzar</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <div id="google_translate_element"></div>
+
+  <script src="./app.js" defer>
+
+  </script>
+</body>
+
+</html>
