@@ -1561,5 +1561,71 @@
         }
       }
     }
+  },
+  "cs_test_a13AZaoRu5eNEA8ipu0KHdJ0waDsUiDGDgmD5Tu4jFGFfi2rWGVCpgKDl5": {
+    "sessionId": "cs_test_a13AZaoRu5eNEA8ipu0KHdJ0waDsUiDGDgmD5Tu4jFGFfi2rWGVCpgKDl5",
+    "createdAt": "2025-08-28T12:56:01.796Z",
+    "result": {
+      "schema_a": {
+        "decision": "no",
+        "probability": "70%"
+      },
+      "schema_b": {
+        "evaluation_points": [
+          {
+            "point": "Strong employment ties",
+            "explanation": "The applicant is employed as a Senior Software Engineer at Infosys with a steady income.",
+            "weight": "high"
+          },
+          {
+            "point": "Family ties in the U.S.",
+            "explanation": "The applicant has a cousin residing in California, which could suggest stronger pull factors to the U.S.",
+            "weight": "medium"
+          },
+          {
+            "point": "Financial means",
+            "explanation": "Sufficient financial resources with an available balance of approximately USD 11,500.",
+            "weight": "high"
+          },
+          {
+            "point": "Limited travel history",
+            "explanation": "Limited international travel history and no previous travel to the U.S.",
+            "weight": "low"
+          }
+        ]
+      },
+      "schema_c": {
+        "detailed_analysis_by_attribute": {
+          "1.1": {
+            "evaluation": "yes",
+            "reasoning": "The applicant is employed full-time with a stable job at Infosys Limited, showing strong ties to their home country."
+          },
+          "1.2": {
+            "evaluation": "yes",
+            "reasoning": "The applicant has sufficient financial resources as indicated by the bank statement with accessible funds and fixed deposits."
+          },
+          "1.3": {
+            "evaluation": "no",
+            "reasoning": "The presence of a cousin in the U.S. might indicate intent to immigrate, affecting the evaluation of ties to the home country."
+          },
+          "1.4": {
+            "evaluation": "unknown",
+            "reasoning": "There is no detailed information on familial ties such as marital status or dependents in the home country."
+          },
+          "1.5": {
+            "evaluation": "no",
+            "reasoning": "The travel history is limited with only visits to the UK and Singapore. This does not demonstrate a pattern of returning to the home country after foreign travel."
+          },
+          "2.1": {
+            "evaluation": "yes",
+            "reasoning": "The applicant plans to stay for a short duration, as evidenced by the travel itinerary and accommodation booking."
+          },
+          "3.1": {
+            "evaluation": "unknown",
+            "reasoning": "There is no data on community involvement or property ownership in the home country."
+          }
+        }
+      }
+    }
   }
 }

@@ -7,7 +7,7 @@ import { fileURLToPath } from "url";
 import dotenv from "dotenv";
 
 import { userinfo } from "./controllers/userController.js";
-import { stripeWebhook } from "./controllers/stripeWebhookController.js";
+
 import { analyzeSession } from "./controllers/analysisController.js";
 dotenv.config();
 
@@ -45,8 +45,7 @@ app.use((req, res, next) => {
 // Routes
 app.post("/api/userinfo", upload.any(), userinfo);
 
-// Stripe webhook route — raw body required
-app.post("/webhook", express.raw({ type: "application/json" }), stripeWebhook);
+
 app.post("/analyze", analyzeSession);
 
 // Health check

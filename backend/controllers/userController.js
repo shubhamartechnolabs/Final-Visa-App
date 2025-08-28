@@ -35,10 +35,10 @@ export const userinfo = async (req, res) => {
         },
       ],
       metadata: { country, visaType, amount: amount.toString() },
-     success_url: `http://127.0.0.1:5501/simulator.html?session_id={CHECKOUT_SESSION_ID}&country=${encodeURIComponent(
+     success_url: `${process.env.FRONT_END_URL}/simulator.html?session_id={CHECKOUT_SESSION_ID}&country=${encodeURIComponent(
     country
   )}&visaType=${encodeURIComponent(visaType)}`,
-      cancel_url: `http://127.0.0.1:5501/cancel.html`,
+      cancel_url: `${process.env.FRONT_END_URL}/cancel.html`,
     });
 
     console.log(session, "Stripe session created");

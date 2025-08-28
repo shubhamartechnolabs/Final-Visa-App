@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-
+const backendUrl = "http://localhost:5000"; 
 
 
   // MOBILE NAV TOGGLE
@@ -523,7 +523,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e?.preventDefault) e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/api/userinfo", {
+      const response = await fetch(`${backendUrl}/api/userinfo`, {
         method: "POST",
         body: formData,
       });
@@ -579,7 +579,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("prevBtn")?.classList.add("hidden");
 
         try {
-          const response = await fetch("http://localhost:5000/analyze", {
+          const response = await fetch(`${backendUrl}/analyze`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
