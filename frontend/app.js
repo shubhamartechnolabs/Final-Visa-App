@@ -559,9 +559,6 @@ const backendUrl = "http://localhost:5000";
   const country = params.get("country") || "N/A";
   const visaType = params.get("visaType") || "N/A";
 
-
-
-
   if (session_id) {
 
 
@@ -590,6 +587,8 @@ const backendUrl = "http://localhost:5000";
               visaType: visaType,
             }),
           });
+
+          console.log(session_id, "session_id");
 
           const data = await response.json();
           console.log("✅ Response:", data);

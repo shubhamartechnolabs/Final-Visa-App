@@ -19,7 +19,7 @@ export const userinfo = async (req, res) => {
       return res.status(400).json({ message: "Country and visaType are required." });
     }
 
-    const amount = 14.99;
+    const amount = 12.99;
 
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
@@ -28,7 +28,7 @@ export const userinfo = async (req, res) => {
         {
           price_data: {
             currency: "usd",
-            product_data: { name: `${visaType} Visa Application` },
+            product_data: { name: `Visa Application` },
             unit_amount: Math.round(amount * 100),
           },
           quantity: 1,

@@ -15,6 +15,7 @@ if (!fs.existsSync(resultBase)) fs.mkdirSync(resultBase, { recursive: true });
 
 export const analyzeSession = async (req, res) => {
   console.log("📩 Hello from analyzeSession");
+  console.log(req.body,"request body");  // Log the entire body to see its structure
   try {
     const { sessionId, country, visaType } = req.body;  // 🔥 FIXED: use body
 

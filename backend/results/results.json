@@ -1627,5 +1627,137 @@
         }
       }
     }
+  },
+  "cs_test_a1cfjg3XTIWkcmVNtTcFB6sdhAC5uiVpioc0wUbe7fTBmvpWFbrb8dDcO2": {
+    "sessionId": "cs_test_a1cfjg3XTIWkcmVNtTcFB6sdhAC5uiVpioc0wUbe7fTBmvpWFbrb8dDcO2",
+    "createdAt": "2025-08-29T05:46:02.159Z",
+    "result": {
+      "error": "❌ Run failed with status: failed"
+    }
+  },
+  "cs_test_a1JJTJOstkBbBw29WOzHeHVMdFVwulvHuxQZp1zHVb3jf4rL9CsevnYk8o": {
+    "sessionId": "cs_test_a1JJTJOstkBbBw29WOzHeHVMdFVwulvHuxQZp1zHVb3jf4rL9CsevnYk8o",
+    "createdAt": "2025-08-29T06:23:53.607Z",
+    "result": {
+      "error": "❌ Run failed with status: failed"
+    }
+  },
+  "cs_test_a1ayHfnVSueWvQBHJzKe0M5ScAq3lDw8JC72GvOmTPHbJQkp90UhbjXEZ1": {
+    "sessionId": "cs_test_a1ayHfnVSueWvQBHJzKe0M5ScAq3lDw8JC72GvOmTPHbJQkp90UhbjXEZ1",
+    "createdAt": "2025-08-29T06:22:46.236Z",
+    "result": {
+      "schema_a": {
+        "decision": "yes",
+        "probability": "85%"
+      },
+      "schema_b": {
+        "evaluation_points": [
+          {
+            "point": "Strong financial and employment ties to home country",
+            "explanation": "The applicant has a stable job with Infosys Limited, a reputed global company, and significant savings.",
+            "weight": "high"
+          },
+          {
+            "point": "Prior international travel experience",
+            "explanation": "The applicant has traveled to the UK and Singapore with no history of overstay or deportation.",
+            "weight": "medium"
+          },
+          {
+            "point": "Family ties in the U.S.",
+            "explanation": "The applicant has a cousin in California, which might be viewed as a weaker tie to the home country.",
+            "weight": "low"
+          }
+        ]
+      },
+      "schema_c": {
+        "detailed_analysis_by_attribute": {
+          "1.1": {
+            "evaluation": "strong",
+            "reasoning": "Applicant's employment at Infosys Limited and substantial financial reserves indicate strong ties to the home country."
+          },
+          "1.2": {
+            "evaluation": "adequate",
+            "reasoning": "Travel history demonstrates responsibility, with legal exits from countries visited for tourism and business purposes."
+          },
+          "1.3": {
+            "evaluation": "moderate",
+            "reasoning": "The presence of a cousin in the U.S. could imply potential immigrant intent, but it is not a direct family member."
+          },
+          "1.4": {
+            "evaluation": "strong",
+            "reasoning": "The hotel booking in New York aligns with the stated purpose of a short visit for tourism."
+          },
+          "1.5": {
+            "evaluation": "unknown",
+            "reasoning": "No specific ties like property ownership or family obligations in the home country are mentioned."
+          },
+          "1.6": {
+            "evaluation": "strong",
+            "reasoning": "The visa application supports the intention to return to India post-visit, with strong employment and financial proofs."
+          }
+        }
+      }
+    }
+  },
+  "cs_test_a1ZHrP1VCgtqGW9JhzcLaNRYPX4QmQshn0lLY5VQGoOnjp6yHcNNUTTMBQ": {
+    "sessionId": "cs_test_a1ZHrP1VCgtqGW9JhzcLaNRYPX4QmQshn0lLY5VQGoOnjp6yHcNNUTTMBQ",
+    "createdAt": "2025-08-29T06:27:18.024Z",
+    "result": {
+      "schema_a": {
+        "decision": "no",
+        "probability": "65%"
+      },
+      "schema_b": {
+        "evaluation_points": [
+          {
+            "point": "Ties to home country",
+            "explanation": "Applicant has stable employment with Infosys Limited and significant financial assets in India, indicating ties to home country.",
+            "weight": "high"
+          },
+          {
+            "point": "Travel history",
+            "explanation": "Limited international travel history, and no prior U.S. travel, could be seen as a potential risk for immigrant intent.",
+            "weight": "medium"
+          },
+          {
+            "point": "Purpose of travel",
+            "explanation": "Stated purpose of tourism and family visit is generally considered credible if supported by other factors.",
+            "weight": "low"
+          }
+        ]
+      },
+      "schema_c": {
+        "detailed_analysis_by_attribute": {
+          "1.1": {
+            "evaluation": "strong",
+            "reasoning": "The applicant has a stable job as a Senior Software Engineer at Infosys with a decent salary, indicating strong professional ties."
+          },
+          "1.2": {
+            "evaluation": "moderate",
+            "reasoning": "The financial evidence provided shows a good bank balance and fixed deposits, supporting the applicant's financial stability."
+          },
+          "1.3": {
+            "evaluation": "weak",
+            "reasoning": "There is no significant travel history to the U.S. or other immigration-risk countries, which might be a concern for the visa officer."
+          },
+          "1.4": {
+            "evaluation": "unknown",
+            "reasoning": "Family ties in the home country are not explicitly provided in the documents."
+          },
+          "1.5": {
+            "evaluation": "moderate",
+            "reasoning": "While the stated purpose for the visit is legitimate, further evidence could strengthen this aspect."
+          },
+          "1.6": {
+            "evaluation": "strong",
+            "reasoning": "The accommodation and travel plans appear consistent with the purpose of the visit."
+          },
+          "2.1": {
+            "evaluation": "unknown",
+            "reasoning": "No information on family members who may need the applicant's support back home was provided."
+          }
+        }
+      }
+    }
   }
 }

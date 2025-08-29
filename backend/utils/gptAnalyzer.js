@@ -22,7 +22,7 @@ async function getOrCreateAssistant(vectorStoreId) {
     name: "visa_analyzer",
      instructions: "You are a visa simulator assistant. When a user uploads their visa application documents, analyze them step by step. Identify missing information, errors, or inconsistencies. Then, simulate the likely outcome (approved, rejected, or needs more information). Provide detailed reasoning for your decision, but stay neutral and professional.",
     model: "gpt-4o",
-    tools: [{ type: "file_search" }],
+    tool_resources: { file_search: { vector_store_ids: [vectorStoreId] } }
   });
 
 
@@ -60,11 +60,9 @@ console.log(filteredFiles, "filteredFiles");
 
 
     // 2. Upload all files into the vector store
-    if (filteredFiles?.length > 0) {
+      if (filteredFiles?.length > 0) {
       await client.vectorStores.fileBatches.uploadAndPoll(vectorStore.id, {
-        files: filteredFiles.map((file) =>
-          fs.createReadStream(file.path)
-        ),
+        files: filteredFiles.map((file) => fs.createReadStream(file.path)),
       });
       console.log("📤 Files uploaded to vector store");
     }
@@ -101,7 +99,7 @@ console.log(filteredFiles, "filteredFiles");
     console.log("💬 Thread created:", thread.id);
 
     // 5. Run the Assistant with file_search connected to vector store
-   const run = await client.beta.threads.runs.createAndPoll(thread.id, {
+   let run = await client.beta.threads.runs.createAndPoll(thread.id, {
   assistant_id: assistantId,
 });
 
@@ -127,7 +125,7 @@ console.log(filteredFiles, "filteredFiles");
     });
 
    const last = messages.data[0];
-const text = last?.content
+   const text = last?.content
   ?.map((c) => c.text?.value || "")
   .join("\n")
   .trim();
